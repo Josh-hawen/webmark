@@ -1,0 +1,28 @@
+//@font-face {
+//	font-family: 'RobotoLight';
+//	src: url('./fonts/Roboto/RobotoLight/RobotoLight.eot');
+//	src:url('./fonts/Roboto/RobotoLight/RobotoLight.eot?#iefix') format('embedded-opentype'),
+//	url('./fonts/Roboto/RobotoLight/RobotoLight.woff') format('woff'),
+//	url('./fonts/Roboto/RobotoLight/RobotoLight.ttf') format('truetype');
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'RobotoBold';
+//	src: url('./fonts/Roboto/RobotoBold/RobotoBold.eot');
+//	src:url('./fonts/Roboto/RobotoBold/RobotoBold.eot?#iefix') format('embedded-opentype'),
+//	url('./fonts/Roboto/RobotoBold/RobotoBold.woff') format('woff'),
+//	url('./fonts/Roboto/RobotoBold/RobotoBold.ttf') format('truetype');
+//	font-style: normal;
+//}
+
+@font-face {
+	font-family: 'FontAwesome';
+	src: url('./libs/font-awesome-4.7.0/fonts/fontawesome-webfont.eot');
+	src:url('./libs/font-awesome-4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+	url('./libs/font-awesome-4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+	url('./libs/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&subset=cyrillic');
+

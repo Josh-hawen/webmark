@@ -1,0 +1,151 @@
+/* Base styles - in general for tags (Базовые стили - в основном для тегов) */
+html {
+	box-sizing: border-box;
+    width: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Rubik', sans-serif;
+	background-color: #f2f3f4;
+    width: 100%;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit;
+	&:hover {
+		text-decoration: none !important;
+	}
+	&:focus {
+		text-decoration: none !important;
+	}
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+h1,
+h2,
+h4 {
+	text-align: center;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 24px;
+
+}
+
+h2 {
+	text-transform: uppercase;
+	font-size: 24px;
+
+}
+h4+h1 {
+	margin-bottom: 0;
+}
+h1+h4 {
+	margin-bottom: 20px;
+}
+h4+p {
+	margin-bottom: 0 !important;
+}
+h4 {
+	font-size: 18px;
+}
+h3 {
+	font-size: 18px;
+	margin: 10px auto 5px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table,
+td,
+th {
+	border: 2px solid #A4A4A4;
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	font-weight: bold;
+	font-size: 0.8em;
+	background: #483F3B;
+	height: 25px;
+}
+
+td {
+	background: #ffff99;
+}
+
+td,
+th {
+	vertical-align: middle;
+	padding: 5px;
+	text-align: center;
+}
+
+
+input {
+	width: 100%;
+	border-radius: 5px;
+	border-color: #999;
+	padding: 5px;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 16px;
+}
+
+input:focus {
+	border-color: dodgerblue;
+}
+
+input[type="submit"] {
+	background-color: dodgerblue;
+	border: none;
+	box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.75);
+	padding: 9px 18px;
+	color: #fff;
+	margin-top: 30px; 
+	width: auto;
+	font-size: 16px;
+}
+
+label {
+	font-size: 18px;
+	color: #fff;
+}
+
+form {
+color: #999;
+	font-size: 16px;
+	
+}

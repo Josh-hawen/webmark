@@ -1,0 +1,226 @@
+.section {
+	background-color: $color-white;
+	border: 1px solid #e0e3e4;
+	padding: 0
+}
+@media screen and (min-width: 1200px) {
+	.main {
+		.container {
+			width: 1136px;
+		}
+	}
+}
+.breadcrumb {
+	display: none;
+}
+
+.breadcrumb li a,
+.breadcrumb span {
+	font-size: 12px;
+}
+
+
+
+/*--------------------------------*/
+
+	.infowork_block {background: none !important; margin-bottom: 30px;}
+    .infowork p {width: 100%; text-align: left; font-size: 16px;}
+    .infowork_block:nth-child(2) p, .infowork_block:nth-child(4) p {width: 100%; text-align: left;}
+    .infowork img {display: block; float: left; padding: 10px 5px 0 0;}
+	.infowork b {clear: both; display: block; font-size: 17px; padding: 15px 0;}
+    .akciya-level-two {width: 90%; margin: 0 0 20px 5%;}
+    .akciya-level-three {width: 90%; margin-left: 5%;}
+    .akciya>h1 {font-size: 24px;}
+
+.akciya {
+    text-align: center;
+    margin: 0 0 10px 0;
+    width: 100%;
+    display: flow-root;
+    background: url(http://ppc.semblog.com.ua/img/bg_main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding: 15px 0 !important;
+}
+
+.akciya-layer {
+    width: 100%;
+    display: flow-root;
+}
+
+.akciya-level-two {
+    width: 90%;
+    margin: 0 0 20px 5%;
+    padding: 0 10%;
+    float: left;
+    border: 3px solid dodgerblue;
+    border-radius: 5px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.akciya-level-three {
+    width: 90%;
+    float: left;
+    border: 3px solid dodgerblue;
+    border-radius: 5px;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.3);
+	margin-left: 5%;
+}
+
+.akciya h4, .akciya h3 {
+    color: #fff;
+    font-weight: bolder;
+    margin: 0 0 40px;
+    font-size: 23px;
+}
+
+.akciya>h4 {
+    padding: 0 6.5%;
+    text-align: justify;
+    font-size: 17px !important;  
+}
+
+.akciya-level-three h4 {margin-bottom: 15px; font-size: 20px;}
+.akciya h3, .akciya>h1 {color: #fff;}
+
+/*-------------------------------pluses---------------------------------------*/
+
+.plus {
+        font-size: 14px;
+        padding: 5px;
+        display: block;
+        color: #666;
+        float: left;
+        border: 1px dotted #169;
+        width: 98%;
+        margin: 1%;
+    }
+    
+    .number {
+    position: inherit;
+    color: #169;
+    line-height: 48px;
+    font-weight: bold;
+    font-size: 42px;
+    border-right: 2px solid #169;
+    float: left;
+    margin: 0 10px 10px 0
+    }
+    
+    .pluses h4, .scheme-of-work h4 {text-align: center; font-size: 22px;}
+    .plus:hover {
+        border: 1px solid #189;}
+    .pluses {display: flow-root;}
+
+
+/*----------------------------------------------------------------------------------*/
+
+.scheme-of-work>div>div {
+      font-size: 16px !important;
+      width: 100%;
+      height: 80px;
+    }
+    
+    .scheme-of-work>div>div:nth-child(1), .scheme-of-work>div>div:nth-child(3), .scheme-of-work>div>div:nth-child(5) {
+        padding: 18px 56% 40px 5px !important;
+        text-align: right;
+    }
+    
+    .scheme-of-work>div>div:nth-child(2), .scheme-of-work>div>div:nth-child(4), .scheme-of-work>div>div:nth-child(6) {
+        padding: 8px 0px 63px 56% !important;
+        text-align: left;
+    }
+    
+    .scheme-desctop {display: none;}
+    .scheme-of-work {display: flow-root;}
+    
+    .scheme1, .scheme2, .scheme3, .scheme4, .scheme5  {
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            a {
+                border-bottom: 1px dotted;
+            }
+}
+
+.scheme1:hover, .scheme2:hover, .scheme3:hover, .scheme4:hover, .scheme5:hover {
+	color: #169;
+}
+    
+    .scheme1 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme1bm.png);}
+    .scheme2 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme2bm.png);}
+    .scheme3 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme3bm.png);}
+    .scheme4 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme4bm.png);}
+    .scheme5 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme5am.png);}
+
+
+    .scheme1-open, .scheme2-open, .scheme3-open, .scheme4-open, .scheme5-open {
+        display: none;
+        width: 100%;
+        border: 3px solid dodgerblue;
+        padding: 15px;
+        h4 {
+            font-family: monospace;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        p {
+                color: #666;
+                font-size: 16px;
+                font-family: 'Rubik';
+            }	
+        
+    }
+
+    .scheme1-open {
+        display: block;
+    }
+    
+    .visible {
+        display: block;
+        transition: 1s ease;
+    }
+/*-----------------------comments----------------------------------*/
+
+.comment {
+    width: 99% !important;
+    margin: 2.5% 0.5%;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+
+.comment img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    float: left;
+    z-index: 999;
+}
+
+
+ progress{
+    position:fixed;
+    left:0;
+    top:99%;
+    width:100%;
+    height:1%;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none;
+    background:transparent;
+    color:dodgerblue;
+}
+
+.statistics {display: flow-root;}
+#timerf6ca75f3b7e25b0338b04951bd3d7fdd {
+    height: 147px !important;
+    text-align: center;
+    padding-top: 36px;
+}

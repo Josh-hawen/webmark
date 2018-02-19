@@ -1,0 +1,25 @@
+.iframe, iframe {
+	width: 100%;
+}
+
+.messengers {
+    display: block;
+	width: 100%;
+}
+
+.messengers { 
+	font-size: 22px;
+	text-align: center;
+	.operators-wrapper {
+		background: url('img/Messengers.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-top: 3px solid dodgerblue; border-bottom: 3px solid dodgerblue;
+		.time-of-work {
+			margin-bottom: 40px;
+			font-size: 20px;
+		}
+	}
+}
+
+

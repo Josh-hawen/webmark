@@ -1,0 +1,17 @@
+/* Colors (цвета) */
+
+$color-header-menu: #d3d3d6;
+$color-active-link: #2eb5f3;
+$color-sub: #E0D4CC;
+$color-main-menu: #D3D3D5;
+$color-main-text: #333;
+$color-white: #FFFFFF;
+
+
+
+%page-wrap {
+	max-width: 1200px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

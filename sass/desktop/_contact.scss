@@ -1,0 +1,40 @@
+.iframe {
+	margin-left: -16px;
+	width: 103%;
+}
+
+
+.messengers {
+    display: block;
+	height: 424px;
+	background: url('img/Messengers.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 1134px;
+	margin-left: -15px;
+	margin-top: -5px;
+}
+
+.messengers { 
+	.operators-wrapper {
+		text-align: center;
+		.kyivstar-top {
+			margin-top: 250px;
+			a {
+				font-size: 34px;
+			}
+			a:hover {
+				text-decoration: none !important;
+				transition: ease 0.5s;
+			}
+		}
+		.kyivstar-top:before {
+			height: 34px;
+		}
+	}
+	.adress, .email, .time-of-work {
+		font-size: 28px;
+		text-align: center;
+	}
+}
+

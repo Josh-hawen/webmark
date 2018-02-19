@@ -1,0 +1,77 @@
+/*
+Error: Invalid CSS after "		sdscd": expected "{", was "}"
+        on line 9 of /var/www/wordpress/wp-content/themes/pravo/sass/desktop/_header.scss
+        from line 13 of /var/www/wordpress/wp-content/themes/pravo/sass/style.scss
+
+4: }
+5: 
+6: .header_lang {
+7: 	label{
+8: 		sdscd
+9: 	}
+10: 	ul {
+11: 		padding: 18px 0 10px 0;
+12: 		li {
+13: 			display: inline-block;
+14: 			img {
+
+Backtrace:
+/var/www/wordpress/wp-content/themes/pravo/sass/desktop/_header.scss:9
+/var/www/wordpress/wp-content/themes/pravo/sass/style.scss:13
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1137:in `expected'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1132:in `tok!'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:665:in `block'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:735:in `declaration_or_ruleset'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:685:in `block_child'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:674:in `block_contents'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:666:in `block'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:658:in `ruleset'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:684:in `block_child'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:677:in `block_contents'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:125:in `stylesheet'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:41:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:406:in `_to_tree'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:312:in `to_tree'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/usr/share/koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/usr/share/koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/usr/share/koala/bin/sass:18:in `load'
+/usr/share/koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"		sdscd\": expected \"{\", was \"}\"\A         on line 9 of /var/www/wordpress/wp-content/themes/pravo/sass/desktop/_header.scss\A         from line 13 of /var/www/wordpress/wp-content/themes/pravo/sass/style.scss\A \A 4: }\A 5: \A 6: .header_lang {\A 7: 	label{\A 8: 		sdscd\A 9: 	}\A 10: 	ul {\A 11: 		padding: 18px 0 10px 0;\A 12: 		li {\A 13: 			display: inline-block;\A 14: 			img {"; }

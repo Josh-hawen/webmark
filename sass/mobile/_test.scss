@@ -1,0 +1,208 @@
+
+/* Styles for test Page */
+#test-page .main-menu {
+	// padding-top: 1px;
+	
+	// добавить в соответствующие места потом, это не относится к слйдеру
+	.mobile-list-item {
+		height: 50px;
+	}
+	.header_menu {
+		line-height: 32px;
+	}
+	.header_lang ul {
+		margin: 7px auto;
+	}
+	//удалить стрелки (домики)
+	&>li > ul > li>a:after,
+	&>li > ul > li>a:after {
+		content: '';
+	}
+
+	
+	/* Delete after */
+	// .main-menu > .menu-item:first-child > .sub-menu {
+	// 	display: block !important;
+	// }
+
+	// .main-menu > li:nth-child(1) li,
+	// .main-menu > li:nth-child(2) li {
+	// 	display: block !important;
+	// }
+	// .main-menu > .menu-item:first-child .sub-menu li:first-child .sub-menu {
+	// 	display: block !important;
+	// }
+	/* end */
+
+
+
+	/* First level of menu (первый уровень меню) */
+
+
+	&>li {
+		// место для двух пунктов меню 1-го уровня
+		&>ul {
+			padding-top: 50px;
+			margin-top: 0;
+		}
+		//верхние пункты меню
+		&>a {
+			border: 1px solid transparent;
+			padding: 17.5px 0;
+			width: 50%;
+			border-radius: 0;
+			border: 0;
+			// top: 0;
+			// bottom: 100%;
+		}
+		&:nth-child(1) > a {
+			left: 0px;
+		}
+		&:nth-child(2) > a {
+			right: 0px;
+		}
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			border: 0;
+			border-right: 1px solid #ddd;
+			z-index: 100;
+			color: #fff;
+		}
+		&.current-menu-item > a,
+		&.current-menu-ancestor > a {
+			border-right: 1px solid #1c0a09;
+		}
+		&.current-menu-item:last-child > a,
+		&.current-menu-ancestor:last-child > a {
+			border-left: 1px solid #1c0a09;
+		}
+		// треугольник вниз для активного пункта меню
+		&.current-menu-item > a::before,
+		&.current-menu-ancestor > a::before {
+			content: " ";
+			display: block;
+			border-style: solid;
+			width: 0;
+			height: 0;
+			border-color: #5d514b transparent transparent transparent;
+			border-width: 10px 10px 0 10px;
+			bottom: -10px;
+			left: 50%;
+			position: absolute;
+			margin-left: -10px;
+			z-index: 100;
+		}
+	}
+
+
+
+	/* Second level of menu (второй уровень меню) */
+	&>li > ul > li > a {
+		position: relative;
+	}
+	// треугольник вниз для активного пункта меню
+	&>li > ul > li.current-menu-item > a::before,
+	&>li > ul > li.current-menu-ancestor > a::before {
+		content: " ";
+		display: block;
+		border-style: solid;
+		width: 0;
+		height: 0;
+		border-color: #E4EEF2 transparent transparent transparent;
+		border-width: 10px 10px 0 10px;
+		bottom: -8px;
+		left: 25%;
+		position: absolute;
+		margin-left: -10px;
+		z-index: 100;
+	}
+	&>li > ul > li {
+		border-top: 0;
+		/*margin-top: -1px;*/
+		&>a {
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			// right: 0;
+		}
+	}
+	&>li > ul > li.current-menu-ancestor> a,
+	&>li > ul > li.active> a,
+	&>li > ul > li.current-menu-ancestor> a {
+		padding: 0 40px 0 130px;
+		text-align: center;
+		background-color: #777;
+		background-color: #E4EEF2;
+		color: #000;
+		height: 110px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// ????????????
+	&>li>ul>li {
+		display: none;
+	}
+	&>li>ul>li:first-child {
+		display: block;
+	}
+
+
+
+
+	&>li > ul > li > a {
+		background-image: url("//migrations.agency/wp-content/themes/migrations-agency/img/menu/mobile/9.png");
+		background-repeat: no-repeat;
+		background-position: 40px 50%;
+		background-size: auto 90px;
+	}
+
+	/* Third level of menu (третий уровень меню) */
+	&>li>ul>li>ul {
+		margin-top: 110px;
+		background-color: red !important;
+	}
+	&>li > ul > li {
+		background-color: #5d514b;
+	}
+	&>li>ul>li>ul>.current-menu-item > a,
+	&>li>ul>li>ul>.current-menu-ancestor > a {
+		color: #F66E00;
+	}
+}
+
+
+
+
+/* Menu controls */
+#menu-controls {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+}
+#menu-controls .next,
+#menu-controls .prev {
+	position: absolute;
+	// top: 51px;
+	top: 0;
+	height: 110px;
+	line-height: 110px;
+	font-size: 40px;
+	text-align: center;
+	width: 40px;
+	z-index: 1000;
+	background: transparent no-repeat 50% 50%;
+	background-size: auto 45%;
+}
+#menu-controls .next {
+	right: 0;
+	background-image: url("//migrations.agency/wp-content/themes/migrations-agency/img/menu/mobile/button-right.png");
+}
+#menu-controls .prev {
+	left: 0;
+	background-image: url("//migrations.agency/wp-content/themes/migrations-agency/img/menu/mobile/button-left.png");
+}
+

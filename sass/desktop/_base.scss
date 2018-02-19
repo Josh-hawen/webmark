@@ -1,0 +1,169 @@
+/* Base styles - in general for tags (Базовые стили - в основном для тегов) */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Rubik', sans-serif;
+	background-color: #9e8662 !important;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+i,
+em {
+	font-style: italic;
+}
+
+h1,
+h2,
+h4 {
+	text-align: center;
+	font-weight: bold;
+
+}
+
+h3 {
+    text-align: center;
+
+}
+
+h2 {
+    text-transform: uppercase;
+	font-size: 24px;
+	margin: 0 auto 15px;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 24px;
+	margin: 0 auto 15px;
+}
+h4+h1 {
+	margin-bottom: 0;
+}
+h1+h4 {
+	margin-bottom: 20px;
+}
+h4+p {
+	margin-bottom: 0 !important;
+}
+h4 {
+	text-align: center;
+    font-size: 22px;
+	margin: 10px 0;
+}
+
+
+h3 {
+    font-size: 20px;
+	margin: 10px auto 5px;
+    text-align: center;
+}
+
+
+th, td:first-child {
+	background: #AFCDE7;
+	padding: 10px 20px;
+	color: #333; 
+}
+
+th, td {
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: white; 
+    vertical-align: middle;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+td {
+	background: #D8E6F3; 
+}
+
+td:first-child {
+	text-align: left; 
+}
+
+
+
+h5 {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+table {
+	border-collapse: collapse;
+	text-align: center;
+	width: 100%;
+	height: auto; 
+    margin-top: -10px;
+    border: solid 3px #b2b2b3;
+}
+
+sub, sup {
+    font-size: 12px;
+}
+
+.main-container {
+    text-align: justify;
+}
+
+input {
+	width: 100%;
+	border-radius: 5px;
+	border-color: #999;
+	padding: 6px 24px;
+	background: rgba(0, 0, 0, 0.5);
+	font-size: 16px;
+}
+
+input:focus {
+	border-color: dodgerblue;
+}
+
+input[type="submit"] {
+	margin-top: 30px;
+	background: #2eb5f3;
+	color: #fff;
+	padding: 12px 30px;
+	border: none;
+	width: auto;
+	box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.8);
+	font-size: 16px;
+}
+
+label {
+	font-size: 18px;
+	color: #fff;
+	margin-bottom: 21px;
+}
+
+

@@ -1,0 +1,764 @@
+// HEADER-MAIN-TOP
+.navbar {
+	margin-bottom: 0;
+}
+
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+	padding: 0;
+}
+
+.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+//MAIN MENU
+.main-block-menu{
+	ul {
+		li {
+			a {
+				
+			}
+		}
+	}
+}
+
+/* Main menu behavior (поведение главного меню) */
+.main-menu {
+
+	/* Hide inner lists (скрыть вложенные списки) */
+	ul {
+		display: none;
+	}
+
+	/*
+		Show the second level of menu when selected
+		(показать второй уровень меню когда выбрано)
+	*/
+	&>li {
+		&.current-menu-item>ul,
+		&.current-menu-ancestor>ul {
+			display: block;
+		}
+	}
+
+	/*
+		Show the third level of menu when selected
+		(показать третий уровень меню когда выбрано)
+	*/
+	&>li>ul>li {
+		&.current-menu-item>ul,
+		&.current-menu-ancestor>ul {
+			display: block;
+		}
+	}
+
+}
+
+/* Main menu styles (стили главного меню) */
+.main-menu {
+
+	text-align: center;
+	@extend %page-wrap;
+
+	// Prevent margin collapse
+	// (предотвратить схлопывание отступов)
+	padding: 1px 0;
+	margin: 2px auto;
+	position: relative;
+
+	/* First level of menu (первый уровень меню) */
+	&>li {
+		// new
+		&>ul {
+			padding-top: 70px;
+			margin: 35px auto 15px;
+			margin-top: 0;
+			transition: height .2s;
+			&>li.current_page_item > a > span {
+				background-color: #f2f2f2 !important;
+				border-left: solid 6px #9e8662;
+                bottom: -5px;
+   			    left: 0;
+   			    right: 0;
+   			    width: 90%;
+   			    margin-left: 5%;
+				line-height: 35px;
+			}
+		}
+		&:nth-of-type(1) a {
+			left: 0;
+		}
+		&:nth-of-type(2) a {
+			right: 0;
+		}
+		
+        
+		&>a {
+			background: url('img/menu/Rectangle3.png');
+			border-radius: 7px;
+			color: #000;
+			font-size: 15px;
+			text-transform: uppercase;
+			position: absolute;
+			top: 1px;
+			width: 49.67%;
+		}
+		&.current-menu-item>a,
+		&.current-menu-ancestor>a,
+		&>a:hover {
+			color: #095580;
+			border-color: inherit;
+		}
+		&.current-menu-item>a,
+		&.current-menu-ancestor>a {
+			&:first-child>a {
+				
+			}
+			&:last-child>a {
+				
+			}
+		}
+        &>a {
+				height: 48px;
+				border: 0;
+				z-index: 100;
+				color: #095580;
+				background: url('img/menu/Rectangle3.png');
+				
+			}
+	}
+
+	/* Second level of menu (второй уровень меню) */
+	&>li>ul {
+		padding: 5px 0;
+		border: 5px solid $color-main-menu;
+		border-left: 0;
+		border-right: 0;
+		margin: 50px auto;
+		font-size: 0;
+		&>li {
+			display: inline-block;
+			margin: 0;
+			margin: 0 .33%;
+			width: 16%;
+			border-left: none;
+			border-right: none;
+			&:last-child {
+				margin-left: 5px !important;
+			}
+			&>a {
+				background: transparent no-repeat 50% 50%;
+				background-size: contain;
+				display: block;
+				height: 90px;
+				position: relative;
+                background-color: #333;
+				// background: rgba(0, 0, 0, 0.4);
+				font-size: 15.2px;
+				color: #000;
+				&>span {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+                    margin-bottom: 5px;
+					// background: rgba(0, 0, 0, 0.5);
+					// padding-bottom: 2px;
+				}
+			}
+			&.current-menu-item {
+				border-color: transparent;
+				background-color: #333;
+			}
+			&.current-menu-item>a,
+			&.current-menu-ancestor>a,
+			&>a:hover {
+				// background: rgba(0, 0, 0, 0.1);
+				flex: 0 0 244px;
+				color: #9e8662;
+                background-color: #333;
+				span {
+					// background: rgba(0, 0, 0, 0.7);
+				}
+			}
+		}
+	}
+	&>li:first-child>ul>li {
+		// Images for second level menu
+		// (картинки для второго уровня меню)
+		// (первый пункт верхнего уровня)
+		&:nth-child(1)>a {
+			background-image: url('img/menu/first/10.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(2)>a {
+			background-image: url('img/menu/first/11.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(3)>a {
+			background-image: url('img/menu/first/12.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(4)>a {
+			background-image: url('img/menu/first/13.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(5)>a {
+			background-image: url('img/menu/first/14.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(6)>a {
+			background-image: url('img/menu/first/15.jpg');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(7)>a {
+			background-image: url('img/menu/first/16.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(8)>a {
+			background-image: url('img/menu/first/17.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(9)>a {
+			background-image: url('img/menu/first/18.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(10)>a {
+			background-image: url('img/menu/first/19.png');
+			background-size: 100% 80px;
+			background-position-y: 8px;
+            background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+	}
+	&>li:last-child>ul>li {
+		// Images for second level menu
+		// (картинки для второго уровня меню)
+		// (второй пункт верхнего уровня)
+		&:nth-child(1)>a {
+			background-image: url('img/menu/second/20.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(2)>a {
+			background-image: url('img/menu/second/21.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(3)>a {
+			background-image: url('img/menu/second/22.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(4)>a {
+			background-image: url('img/menu/second/23.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(5)>a {
+			background-image: url('img/menu/second/24.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(6)>a {
+			background-image: url('img/menu/second/25.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(7)>a {
+			background-image: url('img/menu/second/26.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(8)>a {
+			background-image: url('img/menu/second/27.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(9)>a {
+			background-image: url('img/menu/second/28.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+        &:nth-child(10)>a {
+			background-image: url('img/menu/second/29.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+
+	}
+	&>li:nth-child(2)>ul>li {
+		// Images for second level menu
+		// (картинки для второго уровня меню)
+		// (второй пункт верхнего уровня)
+		&:nth-child(1)>a {
+			background-image: url('img/menu/third/30.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(2)>a {
+			background-image: url('img/menu/third/31.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(3)>a {
+			background-image: url('img/menu/third/32.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(4)>a {
+			background-image: url('img/menu/third/33.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(5)>a {
+			background-image: url('img/menu/third/34.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(6)>a {
+			background-image: url('img/menu/third/35.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(7)>a {
+			background-image: url('img/menu/third/36.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(8)>a {
+			background-image: url('img/menu/third/37.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+		&:nth-child(9)>a {
+			background-image: url('img/menu/third/38.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+        &:nth-child(10)>a {
+			background-image: url('img/menu/third/39.png');
+			background-size: 100% 80px;
+			background-position: top;
+			height: 115px;
+			text-transform: uppercase;
+		}
+
+	}
+
+	/* Third level of menu (третий уровень меню) */
+	&>li>ul>li>ul {
+        padding: 10px 0;
+		position: relative;
+		bottom: 8px;
+		left: 0;
+		right: 0;
+		text-align: center;
+		font-size: 0;
+		&>li {
+			display: block;
+			&>a {
+				color: $color-main-text;
+				font-size: 15px;
+				display: block;
+				width: 90%;
+				margin-left: 5%;
+				text-align: left;
+                padding: 7px 20px;
+				text-decoration: none;
+				background: #f2f2f2;
+    margin-bottom: 6px;
+    border-left: 6px #cacaca solid;
+    box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+			}
+            &>a:hover {
+                color: #9e8662;
+   				text-decoration: none;
+   				border-left: 6px #9e8662 solid !important;
+            }
+			&:first-child>a {
+				 border-left: none;
+			     border-left: 6px #cacaca solid;
+   				 -webkit-box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
+   				 box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
+   				 text-overflow: ellipsis;
+   				 overflow: hidden;
+   				 white-space: nowrap;
+			}
+			&:last-child>a {
+				border-right: none;
+			}
+			&.current-menu-item>a,
+			&.current-menu-ancestor>a {
+				z-index: 111;
+				text-align: left;
+				text-decoration: none;
+				transition: 0.4s;
+				width: 90%;
+				margin-left: 5%;
+				padding: 7px 20px;
+				color: #9e8662;
+    			text-decoration: none;
+    			border-left: 6px #9e8662 solid;
+			}
+		}
+	}
+
+}
+
+/* Fourth level of menu (четвертый уровень меню) */
+.deep_menu {
+	width: 20%;
+	float: right;
+	border: 1px solid black;
+	border-radius: 20px;
+	margin-left: 15px;
+	&>ul {
+		padding: 10px 0;
+		&>li {
+			list-style-type: none;
+			font-size: 1em;
+			margin-bottom: 5px;
+			&>a {
+				color: #12c;
+				text-decoration: none;
+				border-bottom: 1px dotted;
+			}
+			a:hover,
+			&.current-menu-item>a {
+				color: #F66E00;
+				border-bottom-style: solid;
+			}
+		}
+	}
+}
+
+/*
+	Styles for menu items to match blocks
+	(стили для пунктов меню чтобы не вылазить из блоков)
+*/
+#menu-menu-ru>li>ul>li {
+	&:nth-child(1)>a>span {
+		padding: 0;
+	}
+	&:nth-child(2)>a>span {
+		padding: 0 10px;
+	}
+	&:nth-child(3)>a>span {
+		padding: 0 15px;
+	}
+	&:nth-child(4)>a>span {
+		padding: 0 25px;
+	}
+	&:nth-child(5)>a>span {
+		padding: 0 15px;
+	}
+	&:nth-child(6)>a>span {
+		padding: 0;
+	}
+}
+#menu-menu-ua>li>ul>li {
+	&:nth-child(1)>a>span {
+		padding: 0 15px;
+	}
+	&:nth-child(2)>a>span {
+		padding: 0;
+	}
+	&:nth-child(3)>a>span {
+		padding: 0 30px;
+	}
+	&:nth-child(4)>a>span {
+		font-size: 1em;
+		padding: 0;
+	}
+	&:nth-child(5)>a>span {
+		font-size: .95em;
+		padding: 0;
+	}
+	&:nth-child(6)>a>span {
+		padding: 0;
+	}
+}
+#menu-menu-eng>li>ul>li {
+	&:nth-child(1)>a>span {
+		padding: 0;
+	}
+	&:nth-child(2)>a>span {
+		padding: 0 26px;
+	}
+	&:nth-child(3)>a>span {
+		padding: 0 30px;
+	}
+	&:nth-child(4)>a>span {
+		padding: 0 12px;
+	}
+	&:nth-child(5)>a>span {
+		padding: 0;
+	}
+	&:nth-child(6)>a>span {
+		padding: 0 30px;
+	}
+}
+
+
+// main-menu-slider
+
+
+.main-menu>li.current-menu-item>.sub-menu,
+.main-menu>li.current-menu-ancestor>.sub-menu {
+  /*background-color: #ddd;*/
+  display: flex;
+  /*height: 250px;*/
+  /*padding: 0;*/
+  /*margin: 0;*/
+  max-width: 100%;
+  overflow-x: hidden;
+  /*position: relative;*/
+  transition: .3s;
+  margin-bottom: 0px;
+}
+.main-menu>li>ul {
+  border-color: transparent;
+  padding-bottom: 10px;
+}
+
+.menu-dots {
+  // width: 100%;
+  z-index: 100;
+  width: 100px;
+  margin: auto;
+  position: relative;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.menu-dots li {
+    display: inline-block;
+    /*color: #fff;*/
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid #333;
+    margin: 0 1px 0;
+  }
+.menu-dots li.active {
+  /*color: #f0e;*/
+  border-color: #333;
+  background-color: #333;
+}
+
+/*
+.main-menu>li.current-menu-item,
+.main-menu>li.current-menu-ancestor {
+  background-color: #E4EEF2;
+}
+*/
+
+.main-menu>li.current-menu-item>.sub-menu>li,
+.main-menu>li.current-menu-ancestor>.sub-menu>li {
+  /*border: 1px solid black;*/
+  /*list-style-type: none;*/
+  background-color: #333;
+  flex: 0 0 276px;
+  margin: 0 5px;
+  position: relative;
+}
+
+#next_desktop,
+#prev_desktop {
+  position: absolute;
+  top: 106px;
+  /*background-color: red;*/
+  height: 122px;
+  width: 50px;
+  z-index: 10;
+  transition: .15s;
+  background-size: auto 100px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+#next_desktop:hover {
+  background-image: url(img/menu/mobile/button-right_h.png);
+}
+#prev_desktop:hover {
+  background-image: url(img/menu/mobile/button-left_h.png);
+}
+.main-menu > li > ul > li.current-menu-item > ul,
+.main-menu > li > ul > li.current-menu-ancestor > ul {
+	text-align: center;
+	position: relative;
+	padding-top: 14px;
+}
+
+.main-menu > li.current-menu-item > a:before,
+.main-menu > li.current-menu-ancestor > a:before {
+  content: '';
+  display: none;
+}
+
+#next_desktop.active,
+#prev_desktop.active {
+  opacity: .5;
+}
+
+#next_desktop {
+  right: -55px;
+  background-image: url(img/menu/mobile/button-right.png);
+}
+
+#prev_desktop {
+  left: -55px;
+  background-image: url(img/menu/mobile/button-left.png);
+}
+
+.main-menu > li > a {
+  color: #000;
+  border-radius: 0;
+  padding: 15px 12px;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  width: 33.2%;
+  right: 381px;
+}
+.main-menu > li:first-child > a {
+  
+}
+
+.main-menu > li.current-menu-item > a,
+.main-menu > li.current-menu-ancestor > a {
+	color: #9e8662 ;
+	border-color: $color-active-link;
+	background-color: #666 !important;
+	text-decoration: none;
+}
+
+.main-menu > li > a:hover {
+    color: #9e8662 ;
+}
+
+.main-menu > li > ul > li.menu-item > .sub-menu, 
+.main-menu > li > ul > li.menu-item > .sub-menu {
+	display: block!important;
+	padding-top: 14px;
+}
+
+.hover {
+	background-color: #333;
+}
+
+
+/*====================block2===============================*/
+.main-menu > li> ul > li > ul > li.current-menu-item > a, .main-menu > li> ul > li > ul > li.current-menu-ancestor > a {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #fff;
+}
+
+.main-menu > li> ul > li > a {
+	background-color: rgba(0, 0, 0, 0);
+	color: #fff;
+}
+
+
+
+.main-menu > li.current-menu-item > .sub-menu > li, .main-menu > li.current-menu-ancestor > .sub-menu > li {
+	border: 1px solid #333;
+}
+
+
+
+.main-menu > li> ul > li.current-menu-ancestor > a {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.main-menu > li> ul > li.current-menu-item {
+	background-color: #333;
+	color: black;
+	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 2px dodgerblue solid !important;
+	border-bottom: 6px dodgerblue solid !important;
+}
+
+
+
+
+

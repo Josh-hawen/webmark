@@ -1,0 +1,16 @@
+/* Colors (цвета) */
+
+$color-header-menu: #d3d3d6;
+$color-active-link: #2eb5f3;
+$color-sub: #E0D4CC;
+$color-main-menu: #D3D3D5;
+$color-main-text: #333;
+$color-white: #FFFFFF;
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}

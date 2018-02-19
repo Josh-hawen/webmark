@@ -1,0 +1,49 @@
+/*
+Theme Name: WebMark theme 2.0
+*/
+
+@import "compass/reset";
+
+/* Styles for desktop (стили для больших экранов) */
+@media screen and (min-device-width: 1130px) {
+
+	@import "desktop/_variables.scss";
+	@import "desktop/_base.scss";
+	@import "desktop/_fonts.scss";
+	@import "desktop/_header.scss";
+	@import "desktop/_menu.scss";
+	@import "desktop/_content.scss";
+	@import "desktop/_search.scss";
+	@import "desktop/_footer.scss";
+	@import "desktop/_contact.scss";
+
+}
+
+/* Styles for mobile devices (стили для мобильных устройств) */
+
+@media screen and (max-device-width: 1129px) {
+
+	@import "mobile/_variables.scss";
+	@import "mobile/_base.scss";
+	@import "mobile/_header.scss";
+	@import "mobile/_menu.scss";
+	@import "mobile/_content.scss";
+	@import "mobile/_search.scss";
+	@import "mobile/_footer.scss";
+	@import "mobile/_contact.scss";
+}
+
+/* Styles for printers (стили для принтеров) */
+@media print {
+
+	#header,
+	#nav,
+	#footer,
+	#print,
+	#jivo-iframe-container,
+	.search-form,
+	#__telerWdTriggerContent {
+		display: none !important;
+	}
+
+}

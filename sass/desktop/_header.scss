@@ -1,0 +1,374 @@
+.top-header-menu {
+	padding: 0 !important;
+}
+
+
+.navbar-nav > li > a {
+	padding: 0 10px;
+	margin: 0 auto;
+	display: block;
+	border-right: 1px solid #ffd200 !important;
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+	color: #fff !important;
+	font-family: 'Verdana';
+	border-radius: none;
+}
+
+.navbar-nav > li > a:last-child {
+	border: none;
+}
+
+.navbar-nav > li {
+	padding: 12px 0;
+}
+
+.navbar-default {
+	border-bottom: 2px solid #d2d2d5 !important;
+	width: 100%;
+}
+
+.header-main {
+	
+	height: 140px;
+}
+
+.location {
+	padding-top: 15px;
+	margin-left: 60px;
+	font-size: 16px;
+	img {
+		float: left;
+		width: 90px;
+		margin-right: 10px;
+		border: 1px solid #000;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+	span {
+		color: #00366b;
+		border-bottom: 1px dotted #00366b;
+	}
+}
+
+
+
+/*============================================================*/
+.map_info_text {cursor: pointer;}
+
+.map-big {
+	.map-open {
+	width: 813px;
+	height: 524px;
+	display: none;
+	background: url(img/header/map-trigger.png);
+	background-size: contain;
+	position: absolute;
+	z-index: 1;
+	border: 2px dotted #999;
+	padding: 0;
+	opacity: 0;
+	.map-close {
+		top: 10px;
+		right: 10px;
+		width: 48px;
+		height: 48px;
+		background-size: contain;
+		position: absolute;
+		border: none;
+		cursor: pointer;
+		color: #000;
+		.far {
+			background: #fff;
+			border-radius: 50%;
+		}
+		.far:hover {
+			transform: rotate(180deg);
+			transition: 1s ease;
+		}
+		.far:active {
+			color: red;
+			transition: 0.3s ease;
+		}
+	}
+	}
+	.overlay {
+		z-index:998; 
+		position:fixed; 
+		background-color:#000; 
+		opacity:0.8; 
+		-moz-opacity:0.8; 
+		filter:alpha(opacity=80);
+		width:100%; 
+		height:100%; 
+		top:0; 
+		left:0;
+		cursor:pointer;
+		display:none; 
+	}
+}
+
+.map-open.active {
+	display: block !important;
+	z-index: 999;
+	right: -175px;
+}
+
+.webmark-groupe {
+	width: 33.33%;
+	float: left;
+}
+
+.toggle-menu {
+	display: none;
+}
+
+.header_lang {
+	position: relative;
+    z-index: 9999;
+	.lang {
+		width: 100px;
+		margin-top: 5px;
+	}	
+
+	ul {
+		background-color: #fff;
+		border: 1px solid #00366b;
+		border-radius: 6px;
+		li {
+			display: block;
+			position: relative;
+			a {
+				padding: 11px 11px;
+				position: relative;
+				display: block;
+				&:hover {
+					color: #00366b;
+				}
+			}
+		}
+		.lang-item {
+			display: none;
+
+		}
+
+		.current-lang {
+			display: block;
+			color: #00366b;
+			&:after {
+				font-family: 'FontAwesome';
+				font-size: 1.8em;
+				position: absolute;
+				top: 51%;
+				left: 67%;
+				display: block;
+				content: '\f107';
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				color: #00366b;
+				cursor: pointer;
+				width: 33px;
+				height: 38px;
+				line-height: 1.3;
+			}
+		}
+	}
+}
+
+.lang.active  li {
+	display: block;
+}
+
+.lang.active li.current-lang {
+	&:after {
+		content: '\f106';
+	}
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: $color-main-text;
+	&:hover {
+		color: $color-active-link;
+		transition: 0.4s;
+	}
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	color: $color-active-link;
+	background-color: transparent;
+}
+
+.header-main {
+	padding: 10px;
+	.header-logo, .col-md-1{
+		padding-left: 12px;
+		padding-right: 12px;
+		width: 40%;
+		float: left;
+		img {
+			width: 107px;
+			height: 115px;
+		}
+	}
+
+	.company-name-header  {
+		width: calc(60% - 13px);
+		float: right;
+		padding-top: 10px;
+		.hr {
+			border: 1px solid #024487;
+			width: 90%;
+			margin-bottom: 5px;
+			margin-left: 2%;
+		}
+		
+		h2 {
+			font-size: 36px;
+			font-weight: 400;
+			text-align: left;
+			margin: 0;
+			a {
+				color: #024487;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			span {
+				color: #c69d07;
+				font-size: 36px;
+				font-weight: 400;
+			}
+		}
+		p {
+			color: #000;
+			font-size: 18px;
+			font-weight: 400;
+			text-align: left;
+			margin-bottom: -10px;
+		}
+		span {
+			font-family: 'Arial';
+			color: #00366b;
+			font-size: 13px;
+			font-weight: 400;
+		}
+		
+	}
+
+	.info-work {
+		font-size: 1.3em;
+		text-align: center;
+		line-height: 1.4;
+	}
+	
+	//HEADER CONTACT NUMBER
+	.contact-header{
+		padding-left: 0;
+		padding-right: 0;
+		text-align: right;
+		position: absolute;
+    	right: 50px;
+		.col-md-12 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+			p {
+				margin: 5px 0;
+
+				a {
+
+					&:hover {
+						color: $color-active-link;
+						text-decoration: none;
+						transition: 0.4s;
+					}
+				}
+
+				.call-me {
+					font-size: 0.84375em;
+					border-bottom: 1px dotted #000;
+					&:hover {
+						border-bottom: 1px dotted $color-active-link;
+					}
+				}
+			}
+	}
+}
+.callme a {
+	color: #fff;
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 0.8px;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.kyivstar-top a,
+.lifecell-top a,
+.vodafone-top a,
+.email {
+	color: #000;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.kyivstar-top,
+.lifecell-top,
+.vodafone-top,
+.email {
+	&:before {
+		content: '';
+		display: inline-block;
+		vertical-align: middle;
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+        font-size: 20px;
+	}
+}
+
+.kyivstar-top:before {
+	background: url(img/header/icon-phone.png) 0 0 no-repeat;
+	background-size: contain;
+}
+
+.lifecell-top:before {
+	background: url(img/logo/operator/lifecell.png) 0 0 no-repeat;
+	background-size: contain;
+}
+
+.vodafone-top:before {
+	background: url(img/logo/operator/vodafone.png) 0 0 no-repeat;
+	background-size: contain;
+}
+
+.email:before {
+	background: url(img/header/icon-mail.png) 0 0 no-repeat;
+	background-size: contain;
+	height: 18px;
+}
+
+/*-----------------Mobile-----------------*/
+.mobile-list-item > span {
+	display: none;
+}
+.header_email,
+.mobile-time {
+	display: none;
+}
+
+
+.info-work, .operators-wrapper {
+	padding-top: 20px;
+}
+
+.email {font-size: 14px;}
+
+
+
+
+/* modal */
+
