@@ -12,18 +12,9 @@
 .container-fluid {
 	padding-right: 0;
 	padding-left: 0;
+	height: 0;
 }
 
-//MAIN MENU
-.main-block-menu{
-	ul {
-		li {
-			a {
-				
-			}
-		}
-	}
-}
 
 /* Main menu behavior (поведение главного меню) */
 .main-menu {
@@ -72,32 +63,29 @@
 	/* First level of menu (первый уровень меню) */
 	&>li {
 		// new
-		&>ul {
-			padding-top: 70px;
-			margin: 35px auto 15px;
-			margin-top: 0;
-			transition: height .2s;
-			&>li.current_page_item > a > span {
-				background-color: #f2f2f2 !important;
-				border-left: solid 6px #9e8662;
-                bottom: -5px;
+		&>ul>li.current_page_item > a > span {
+				background-color: #f5f5f5 !important;
+				color: #000;
    			    left: 0;
    			    right: 0;
-   			    width: 90%;
-   			    margin-left: 5%;
+   			    width: 93%;
+   			    margin-left: 3%;
 				line-height: 35px;
-			}
+				border-bottom: 1px dotted;
+				font-weight: bold;
 		}
 		&:nth-of-type(1) a {
 			left: 0;
 		}
-		&:nth-of-type(2) a {
-			right: 0;
+		&:nth-of-type(2) a:first-child {
+			right: 33.35%;
+		}
+		&:nth-of-type(3) a:first-child {
 		}
 		
         
 		&>a {
-			background: url('img/menu/Rectangle3.png');
+			background: #d5d5d5;
 			border-radius: 7px;
 			color: #000;
 			font-size: 15px;
@@ -126,19 +114,19 @@
 				border: 0;
 				z-index: 100;
 				color: #095580;
-				background: url('img/menu/Rectangle3.png');
+				background: #d5d5d5;
 				
 			}
 	}
 
 	/* Second level of menu (второй уровень меню) */
 	&>li>ul {
-		padding: 5px 0;
-		border: 5px solid $color-main-menu;
+		padding: 0 0;
 		border-left: 0;
 		border-right: 0;
-		margin: 50px auto;
 		font-size: 0;
+		margin-top: 48px !important;
+		border-top: 15px solid #f5f5f5 !important;
 		&>li {
 			display: inline-block;
 			margin: 0;
@@ -146,280 +134,51 @@
 			width: 16%;
 			border-left: none;
 			border-right: none;
-			&:last-child {
-				margin-left: 5px !important;
-			}
 			&>a {
 				background: transparent no-repeat 50% 50%;
 				background-size: contain;
 				display: block;
-				height: 90px;
+				height: 40px;
 				position: relative;
-                background-color: #333;
+                background-color: #000;
 				// background: rgba(0, 0, 0, 0.4);
 				font-size: 15.2px;
 				color: #000;
 				&>span {
 					position: absolute;
-					bottom: 0;
 					left: 0;
 					right: 0;
-                    margin-bottom: 5px;
-					// background: rgba(0, 0, 0, 0.5);
-					// padding-bottom: 2px;
+					width: 93%;
+					margin-left: 3%;
+					line-height: 35px;
+					border-bottom: 1px dotted;
 				}
 			}
 			&.current-menu-item {
 				border-color: transparent;
-				background-color: #333;
+				background-color: #000;
 			}
 			&.current-menu-item>a,
 			&.current-menu-ancestor>a,
 			&>a:hover {
 				// background: rgba(0, 0, 0, 0.1);
 				flex: 0 0 244px;
-				color: #9e8662;
-                background-color: #333;
+				color: #000;
 				span {
 					// background: rgba(0, 0, 0, 0.7);
 				}
 			}
 		}
 	}
-	&>li:first-child>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (первый пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url('img/menu/first/10.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
+	&>li>ul>li>a {
 			text-transform: uppercase;
 		}
-		&:nth-child(2)>a {
-			background-image: url('img/menu/first/11.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(3)>a {
-			background-image: url('img/menu/first/12.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(4)>a {
-			background-image: url('img/menu/first/13.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(5)>a {
-			background-image: url('img/menu/first/14.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(6)>a {
-			background-image: url('img/menu/first/15.jpg');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(7)>a {
-			background-image: url('img/menu/first/16.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/first/17.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/first/18.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(10)>a {
-			background-image: url('img/menu/first/19.png');
-			background-size: 100% 80px;
-			background-position-y: 8px;
-            background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-	}
-	&>li:last-child>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (второй пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url('img/menu/second/20.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(2)>a {
-			background-image: url('img/menu/second/21.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(3)>a {
-			background-image: url('img/menu/second/22.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(4)>a {
-			background-image: url('img/menu/second/23.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(5)>a {
-			background-image: url('img/menu/second/24.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(6)>a {
-			background-image: url('img/menu/second/25.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(7)>a {
-			background-image: url('img/menu/second/26.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/second/27.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/second/28.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-        &:nth-child(10)>a {
-			background-image: url('img/menu/second/29.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-
-	}
-	&>li:nth-child(2)>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (второй пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url('img/menu/third/30.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(2)>a {
-			background-image: url('img/menu/third/31.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(3)>a {
-			background-image: url('img/menu/third/32.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(4)>a {
-			background-image: url('img/menu/third/33.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(5)>a {
-			background-image: url('img/menu/third/34.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(6)>a {
-			background-image: url('img/menu/third/35.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(7)>a {
-			background-image: url('img/menu/third/36.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/third/37.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/third/38.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-        &:nth-child(10)>a {
-			background-image: url('img/menu/third/39.png');
-			background-size: 100% 80px;
-			background-position: top;
-			height: 115px;
-			text-transform: uppercase;
-		}
-
-	}
-
+		
+	
 	/* Third level of menu (третий уровень меню) */
 	&>li>ul>li>ul {
-        padding: 10px 0;
 		position: relative;
-		bottom: 8px;
+		bottom: 4px;
 		left: 0;
 		right: 0;
 		text-align: center;
@@ -427,32 +186,24 @@
 		&>li {
 			display: block;
 			&>a {
-				color: $color-main-text;
+				color: #333;
 				font-size: 15px;
 				display: block;
+				border-bottom: dotted 1px;
 				width: 90%;
 				margin-left: 5%;
 				text-align: left;
-                padding: 7px 20px;
+				padding: 9px 0 9px 65px;
+				
 				text-decoration: none;
-				background: #f2f2f2;
-    margin-bottom: 6px;
-    border-left: 6px #cacaca solid;
-    box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+
 			}
             &>a:hover {
-                color: #9e8662;
+                color: #000;
    				text-decoration: none;
-   				border-left: 6px #9e8662 solid !important;
             }
 			&:first-child>a {
 				 border-left: none;
-			     border-left: 6px #cacaca solid;
-   				 -webkit-box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
-   				 box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
    				 text-overflow: ellipsis;
    				 overflow: hidden;
    				 white-space: nowrap;
@@ -469,41 +220,15 @@
 				width: 90%;
 				margin-left: 5%;
 				padding: 7px 20px;
-				color: #9e8662;
-    			text-decoration: none;
-    			border-left: 6px #9e8662 solid;
-			}
-		}
-	}
-
-}
-
-/* Fourth level of menu (четвертый уровень меню) */
-.deep_menu {
-	width: 20%;
-	float: right;
-	border: 1px solid black;
-	border-radius: 20px;
-	margin-left: 15px;
-	&>ul {
-		padding: 10px 0;
-		&>li {
-			list-style-type: none;
-			font-size: 1em;
-			margin-bottom: 5px;
-			&>a {
-				color: #12c;
+				color: #000;
 				text-decoration: none;
-				border-bottom: 1px dotted;
-			}
-			a:hover,
-			&.current-menu-item>a {
-				color: #F66E00;
-				border-bottom-style: solid;
+				background-color: #f2f2f2;
 			}
 		}
 	}
+
 }
+
 
 /*
 	Styles for menu items to match blocks
@@ -587,17 +312,24 @@
   overflow-x: hidden;
   /*position: relative;*/
   transition: .3s;
-  margin-bottom: 0px;
+  margin-left: 3px !important;
 }
+
+
+.main-menu>li:nth-child(3).current-menu-item>.sub-menu {
+	max-width: 99.5%;
+}
+
 .main-menu>li>ul {
   border-color: transparent;
-  padding-bottom: 10px;
+  padding-bottom: 0;
+
 }
 
 .menu-dots {
   // width: 100%;
   z-index: 100;
-  width: 100px;
+  width: 130px;
   margin: auto;
   position: relative;
   right: 0;
@@ -606,21 +338,23 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 .menu-dots li {
     display: inline-block;
     /*color: #fff;*/
     font-size: 0;
     width: 10px;
-    height: 10px;
+	height: 10px;
+	border-radius: 50%;
     background-color: transparent;
-    border: 1px solid #333;
+    border: 1px solid #fff;
     margin: 0 1px 0;
   }
 .menu-dots li.active {
   /*color: #f0e;*/
-  border-color: #333;
-  background-color: #333;
+  border-color: #fff;
+  background-color: #fff;
 }
 
 /*
@@ -634,16 +368,76 @@
 .main-menu>li.current-menu-ancestor>.sub-menu>li {
   /*border: 1px solid black;*/
   /*list-style-type: none;*/
-  background-color: #333;
-  flex: 0 0 276px;
-  margin: 0 5px;
+  background-color: #000;
+  flex: 0 0 279px;
   position: relative;
+  height: 160px;
+  overflow-y: auto;
+  background: #f5f5f5;
+  margin: 0 0.7% 0 0;
+  border-bottom-left-radius: 20px;
 }
+// .main-menu>li>.sub-menu>li:first-child {
+// 	border-left: 3px solid #fef22e !important;
+// }
+
+
+a.teler-wd-promo, .teler-wd-link-to-us {
+	display: none !important;
+}
+
+/*=--------------------------------------*/
+
+.main-menu>li>.sub-menu>li::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar
+// {
+// 	width: 10px;
+// 	background-color: #F5F5F5;
+// }
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-button {
+// 	display: block;
+// 	width: 20px;
+// 	height: 20px;
+// }
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-button:decrement:start {background-color:lightblue;
+// 	border:2px solid black;}
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-button:increment:start {
+// 	display: none;
+// }
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-button:decrement:end {
+// 	display: none;
+// }
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-button:increment:end {
+// 	font-family: 'FontAwesome';
+// 	content: '\f0de';
+// 	border:2px solid black;}
+
+// .main-menu>li>.sub-menu>li::-webkit-scrollbar-thumb
+// {
+// 	border-radius: 10px;
+// 	-webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
+// 	background-color: #333;
+// }
+
+
 
 #next_desktop,
 #prev_desktop {
   position: absolute;
-  top: 106px;
+  top: 70px;
   /*background-color: red;*/
   height: 122px;
   width: 50px;
@@ -654,17 +448,11 @@
   background-position: center center;
   cursor: pointer;
 }
-#next_desktop:hover {
-  background-image: url(img/menu/mobile/button-right_h.png);
-}
-#prev_desktop:hover {
-  background-image: url(img/menu/mobile/button-left_h.png);
-}
+
 .main-menu > li > ul > li.current-menu-item > ul,
 .main-menu > li > ul > li.current-menu-ancestor > ul {
 	text-align: center;
 	position: relative;
-	padding-top: 14px;
 }
 
 .main-menu > li.current-menu-item > a:before,
@@ -680,12 +468,22 @@
 
 #next_desktop {
   right: -55px;
-  background-image: url(img/menu/mobile/button-right.png);
+  background-image: url(img/menu/button-right-white.png);
 }
 
 #prev_desktop {
   left: -55px;
-  background-image: url(img/menu/mobile/button-left.png);
+  background-image: url(img/menu/button-left-white.png);
+}
+
+#next_desktop:hover {
+  right: -55px;
+  background-image: url(img/menu/button-right-yellow.png);
+}
+
+#prev_desktop:hover {
+  left: -55px;
+  background-image: url(img/menu/button-left-yellow.png);
 }
 
 .main-menu > li > a {
@@ -695,29 +493,41 @@
   border-right: none;
   border-left: none;
   border-bottom: none;
-  width: 33.2%;
-  right: 381px;
+  width: 33.6%;
+  right: 0;
+  border-bottom: 3px solid #000;
+  border-left: 3px solid;
 }
-.main-menu > li:first-child > a {
-  
+.main-menu > li:nth-child(2) > a {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .main-menu > li.current-menu-item > a,
 .main-menu > li.current-menu-ancestor > a {
-	color: #9e8662 ;
-	border-color: $color-active-link;
-	background-color: #666 !important;
+	color: #000 ;
+	font-weight: bold;
+	border-right: 3px solid #000;
+	border-bottom: 0;
 	text-decoration: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	z-index: 101;
+	background: #f5f5f5;
+}
+
+.main-menu > li.current-menu-ancestor:nth-child(2) > a {
+	left: 33.35%;
 }
 
 .main-menu > li > a:hover {
-    color: #9e8662 ;
+	color: #333 ;
+	text-decoration: none;
 }
 
 .main-menu > li > ul > li.menu-item > .sub-menu, 
 .main-menu > li > ul > li.menu-item > .sub-menu {
 	display: block!important;
-	padding-top: 14px;
 }
 
 .hover {
@@ -727,20 +537,24 @@
 
 /*====================block2===============================*/
 .main-menu > li> ul > li > ul > li.current-menu-item > a, .main-menu > li> ul > li > ul > li.current-menu-ancestor > a {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #fff;
+	background-color: transparent;
+	color: #000;
+	text-align: left;
+	padding-left: 65px;
+	font-size: 16px;
+	box-shadow: inset 0 0 5px rgba(0,0,0,1.5);
 }
 
 .main-menu > li> ul > li > a {
 	background-color: rgba(0, 0, 0, 0);
-	color: #fff;
+	color: #000;
+	left: 0;
 }
 
-
-
-.main-menu > li.current-menu-item > .sub-menu > li, .main-menu > li.current-menu-ancestor > .sub-menu > li {
-	border: 1px solid #333;
+.main-menu > li.current-menu-item:nth-child(2) > a{
+	left: 33.3%;
 }
+
 
 
 
@@ -751,12 +565,28 @@
 .main-menu > li> ul > li.current-menu-item {
 	background-color: #333;
 	color: black;
-	
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border: 2px dodgerblue solid !important;
-	border-bottom: 6px dodgerblue solid !important;
 }
+
+
+
+.menu-item-485, .menu-item-489, .menu-item-836, .menu-item-488, .menu-item-482, .menu-item-944,  .menu-item-865,  .menu-item-866,  .menu-item-867,  .menu-item-868,  .menu-item-945,  .menu-item-904,  .menu-item-969,  .menu-item-970,  .menu-item-905,  .menu-item-906,  .menu-item-907,  .menu-item-908,  .menu-item-909 {
+	background-repeat: no-repeat;
+	background-position: 15% 27%;
+	background-size: 13%;
+}
+
+.menu-item-485, .menu-item-904 {background-image: url(img/menu/icons/adwords.png);}
+.menu-item-489, .menu-item-905 {background-image: url(img/menu/icons/yandex.png);}
+.menu-item-836 {background-image: url(img/menu/icons/bing.png);}
+.menu-item-488, .menu-item-906 {background-image: url(img/menu/icons/facebook.png);}
+.menu-item-482, .menu-item-907 {background-image: url(img/menu/icons/instagram.png);}
+.menu-item-944, .menu-item-969 {background-image: url(img/menu/icons/play.png);}
+.menu-item-865 {background-image: url(img/menu/icons/twitter.png);}
+.menu-item-866, .menu-item-908 {background-image: url(img/menu/icons/vk.png);}
+.menu-item-867, .menu-item-909 {background-image: url(img/menu/icons/od.png);}
+.menu-item-868 {background-image: url(img/menu/icons/pinterest.png);}
+.menu-item-945 {background-image: url(img/menu/icons/skype.png);}
+.menu-item-970 {background-image: url(img/menu/icons/gmail.png);}
 
 
 

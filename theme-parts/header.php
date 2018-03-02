@@ -1,9 +1,10 @@
-<header class="header-bar">
+﻿<header class="header-bar">
 	<div class="container">
 		<div class="top-header-menu col-md-12">
 			
 			<nav class="col-md-12 navbar navbar-default">
 				<div class="container-fluid" id="menu-bar">
+				<span class="menu-close" id="menu-close"><i class="far fa-3x fa-times-circle"></i></span>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 							'theme_location' => 'top-menu', // идентификатор меню, определен в register_nav_menus() в functions.php
@@ -16,18 +17,18 @@
 							wp_nav_menu($args); // выводим верхнее меню
 						?>
 					</div>
-					<div class="menu-overlay" id="menu-overlay"></div>
+					
+					<a href="tel:+380678013311" class="mobile-phone mobile-display"><span class="mobile-phone-icons"></span>+380678013311</a>
+					<a class="header-contacts-mail mobile-display" href="mailto:info@webmark.agency"><i class="fas fa-envelope"></i> info@webmark.agency</a><br>
+					<div class="search-form mobile-display"><form><input type="text" placeholder="Искать здесь..."><button type="submit"></button></form></div>
 				</div>
 			</nav>
-			
-		
 		<div class="header-main col-md-12">
 <!--
 			<div class="col-md-2 header_lang">
 				<?php dynamic_sidebar( 'lang' ); ?>
 			</div>
 -->
-	    	
 			<div class="webmark-groupe">
 		    	<div class="header-logo">
 					<a href="<?php echo $home_url; ?>">
@@ -37,7 +38,6 @@
 				<div class="company-name-header">
 					<p><?php echo $site_desc ?></p>
 					<h2><a href="<?php echo $home_url; ?>">WEB<span>MARK</span></a></h2>
-					<div class="hr"></div>
 					<span class="slogan"><?php echo $slogan ?></span>
 				</div>
 				<div class="toggle-menu" id="menu-open">
@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			
-			<div class="col-md-4 location">
+			<div class="col-md-3 location">
 			    <img src="http://www.webmark.agency/wp-content/uploads/2018/02/map-trigger.png" alt="map" id="map-little">
 				<p>г. Киев, <br> ул. Б. Васильковская, д. 43/16</p>
 				<p>3 минуты от м. Льва Толстого</p>
@@ -56,41 +56,11 @@
 				<span class="overlay" id="overlay"></span>
 				</p>
 			</div>
-			
-			
-			<!-- <div class="col-md-3">
-				<div class="col-md-12 info-work">
-					<p><?php echo $call_us_word; ?></p>
-					<p><?php echo $time_to_work; ?></p>
-					<p><?php echo $working_time; ?></p>
-				</div>
-			</div> -->
-			<div class="contact">
-				<div class="header_email">
-					<div class="mobile-list-item" data-related-item="email">
-						<a class="email analytics-email">Обратный звонок</a>
-					</div>
-				</div>
-				<div class="col-md-3 contact-header">
-					<div class="contact-phones">
-						<div class="phones-wrapper">
-							<div class="mobile-list-item item-phone" data-related-item="operators-wrapper">
-								<span><?php echo $mobile_phones; ?></span>
-							</div>
-
-								<div class="col-md-12 operators-wrapper">
-									<p class="kyivstar-top"><a href="tel:+380678013311" id="kyivstar">+38 (067) 801-33-11</a></p>
-									<p class="mobile-time"><?php echo $mobile_phones_text; ?></p>
-									<p class="callme"><a href="#" class="tl-call-catcher">Заказать обратный звонок</a></p>
-									<p class="email" href="mailto:info@webmark.agency">info@webmark.agency</p>
-								</div>
-						</div>
-					</div>
-				</div>
+			<div class="header-contacts">
+				<a class="header-contacts-phone" href="tel:+380678013311"><i class="fas fa-mobile"></i> +38(067)801-33-11</a><br>
+				<a class="header-contacts-mail" href="mailto:info@webmark.agency"><i class="fas fa-envelope"></i> info@webmark.agency</a><br>
+				<span class="call-back-text tl-call-catcher"><?php echo $call_back ?></span><br>
 			</div>
-		</div>
-		
-		
 		</div>
 	</div>
 </header>

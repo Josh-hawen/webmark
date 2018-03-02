@@ -8,11 +8,11 @@
 	$time_to_work = 'Пн-Пт <span>9:00-19:00</span>';
 
 	$site_name = 'WEBMARK';
-	$site_desc = 'Digital Agency';
+	$site_desc = 'digital agency';
 
 	$call_us_word = 'ЗВОНИТЕ';
     $call_back =  'Заказать обратный звонок';
     $home_url = 'https://www.webmark.agency/';
 
-	$slogan = 'Анаболический Рост Бизнеса'
+	$slogan = 'Реализация digital-стратегий'
 ?>

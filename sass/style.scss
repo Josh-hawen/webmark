@@ -33,6 +33,11 @@ Theme Name: WebMark theme 2.0
 	@import "mobile/_contact.scss";
 }
 
+@media screen and (max-device-width: 320px) {
+
+	@import "mobile-little/_base.scss";
+}
+
 /* Styles for printers (стили для принтеров) */
 @media print {
 

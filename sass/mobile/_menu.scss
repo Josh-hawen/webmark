@@ -13,25 +13,32 @@
 	margin-bottom: 0;
 }
 
+.navbar-default .navbar-nav > li > a {
+	color: #fff;
+}
+
 .container-fluid {
 	padding-left: 0;
 	padding-right: 0;
-	position: absolute;
-	background: #fff;
-	z-index: 9999;
+	position: fixed;
+	background: #666;
+	z-index: 10000;
 	text-align: center;
-	top: 85px;
-	width: 109%;
-	height: 0px;
-	left: -15px;
-	opacity: 0;
+	width: 60%;
+	height: 100vh;
 	overflow: hidden;
+	-webkit-transition: all ease-in 0.7s;
 	transition: all ease-in 0.7s;
+	padding-top: 93px;
+	right: -60%;
 	&.active {
-		height:210px;
-		opacity: 0.95;
+		height: 100vh;
+		opacity: 1;
+		-webkit-transition: all ease-out 0.3s;
 		transition: all ease-out 0.3s;
+		-webkit-transition-delay: 0.3s;
 		transition-delay: 0.3s;
+		right: 0;
 	}
 }
 
@@ -50,7 +57,7 @@
 
 .navbar-header {
 	display: none;
-}
+}	
 
 .navbar-nav {
 	margin: 0 auto;
@@ -59,10 +66,13 @@
 
 
 .nav > li > a {
-	padding: 15px 2px;
+	padding: 10px 2px; 
 	font-size: 18px;
-	border-bottom: 2px dotted;
+	border-bottom: 2px solid;
+	text-align: left;
 }
+
+
 
 
 /* Main menu behavior (поведение главного меню) */
@@ -102,7 +112,7 @@ body > .container {
 		&.current-menu-item>ul>li>ul,
 		&.current-menu-ancestor>ul>li>ul {
 			display: block!important;
-			margin-top: 136px;
+			margin-top: 50px;
 		}
 	}
 
@@ -126,28 +136,35 @@ body > .container {
 			padding-top: 50px;
 			margin: 35px auto 0px;
 			margin-top: 0;
-			background-color: #333;
+			background-color: #000;
+			padding-bottom: 10px;
 			&>li.current_page_item > a > span {
-				background-color: #f2f2f2 !important;
+				background-color: #fef22e !important;
     			position: absolute;
     			bottom: -12px;
     			left: 0;
     			right: 0;
-    			border-left: 6px #9e8662 solid;
    			    width: 83%;
    			    margin: 5px 8.5%;
    			    padding: 8px 0;
-				color: #9e8662;
+				color: #000;
 				font-weight: bold;
 			}
 		}
 		// new end
 		&:nth-child(1)>a {
 			left: 0;
+			border-right: 1px solid black;
 		}
 		&:nth-child(2)>a {
+			right: 33.4%;
+			border-right: 1px solid black;
+			border-left: 1px solid black;
+		}
+		&:nth-child(3)>a {
 			right: 0;
 			font-size: 12px;
+			border-left: 1px solid black;
 		}
 		&>a {
 			background-color: #f2f2f2;
@@ -162,7 +179,7 @@ body > .container {
 			position: absolute;
 			top: 1px;
             height: 48px;
-			right: 120px;
+			right: 33.33%;
 		}
 		// new
 		&>a {
@@ -171,7 +188,8 @@ body > .container {
 			border-radius: 0;
 			border: 0;
 			text-transform: uppercase;
-            height: 48px;
+			height: 48px;
+			border-left: 1px solid;
 		}
 		// new end
 		&.current-menu-item,
@@ -181,7 +199,8 @@ body > .container {
 				border: 0;
 				z-index: 100;
 				color: #000;
-				background-color: #cacaca;
+				background-color: #fef22e;
+				border-left: 1px solid black;
 			}
 		}
 	}
@@ -216,10 +235,10 @@ body > .container {
 			padding: 0 40px 0 130px;
 			text-align: center;
 			// background-color: #777;
-			background-color: #333;
+			background-color: #000;
 			// background-color: #5d514b;
 			color: #000;
-			height: 110px;
+			height: 50px;
 			align-items: center;
 			justify-content: center;
 
@@ -233,11 +252,10 @@ body > .container {
 				left: 0;
 				right: 0;
 				padding: 8px 0;
-				background-color: #f2f2f2 !important;
-				border-left: solid 6px #cacaca;
+				background-color: #cacaca !important;
 				width: 83%;
 				margin: 5px 8.5%;
-				color: #9e8662;
+				color: #000;
 			}
 		}
 
@@ -248,7 +266,7 @@ body > .container {
 			&>a {
 				color: $color-white;
 				border-color: transparent;
-				background-color: #333 !important;
+				background-color: #000 !important;
 				// &:after {
 				// 	transform: rotate(180deg);
 				// }
@@ -257,261 +275,8 @@ body > .container {
 	}
 
 	/* Images for "Services to foreigners" (картинки для "Углуги иностранцам") */
-	&>li:first-child>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (первый пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url('img/menu/first/10.jpg');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
+	&>li:first-child>ul>li>a {
 			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(2)>a {
-			background-image: url('img/menu/first/11.jpg');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(3)>a {
-			background-image: url('img/menu/first/12.jpg');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(4)>a {
-			background-image: url('img/menu/first/13.jpg');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(5)>a {
-			background-image: url('img/menu/first/14.jpg');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(6)>a {
-			background-image: url('img/menu/first/15.png');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(7)>a {
-			background-image: url('img/menu/first/16.png');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/first/17.png');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/first/18.png');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(10)>a {
-			background-image: url('img/menu/first/19.png');
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-	}
-	&>li:last-child>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (второй пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url("img/menu/second/20.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(2)>a {
-			background-image: url("img/menu/second/21.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(3)>a {
-			background-image: url("img/menu/second/22.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(4)>a {
-			background-image: url("img/menu/second/23.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(5)>a {
-			background-image: url("img/menu/second/24.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(6)>a {
-			background-image: url("img/menu/second/25.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}second
-		&:nth-child(7)>a {
-			background-image: url("img/menu/second/26.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/second/27.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/second/28.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-        &:nth-child(10)>a {
-			background-image: url('img/menu/second/29.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-	}
-	
-	&>li:nth-child(2)>ul>li {
-		// Images for second level menu
-		// (картинки для второго уровня меню)
-		// (третий пункт верхнего уровня)
-		&:nth-child(1)>a {
-			background-image: url("img/menu/third/30.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(2)>a {
-			background-image: url("img/menu/third/31.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(3)>a {
-			background-image: url("img/menu/third/32.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(4)>a {
-			background-image: url("img/menu/third/33.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(5)>a {
-			background-image: url("img/menu/third/34.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(6)>a {
-			background-image: url("img/menu/third/35.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}second
-		&:nth-child(7)>a {
-			background-image: url("img/menu/third/36.png");
-			background-size: 83% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(8)>a {
-			background-image: url('img/menu/third/37.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-		&:nth-child(9)>a {
-			background-image: url('img/menu/third/38.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
-        &:nth-child(10)>a {
-			background-image: url('img/menu/third/39.png');
-			background-size: 100% 90px;
-			background-position: top;
-			height: 125px;
-			text-transform: uppercase;
-			top: 65px;
-		}
 	}
 
 	/* Third level of menu (третий уровень меню) */
@@ -524,7 +289,6 @@ body > .container {
 			&>a {
 				color: $color-main-text;
 				display: block;
-				border-left: 6px #cacaca solid;
 				width: 83%;
 				margin: 5px 8.5%;
 				text-align: left;
@@ -538,8 +302,7 @@ body > .container {
 			}
 			&.current_page_item>a,
 			&.current-menu-ancestor>a {
-				color: #9e8662;
-				border-left: 6px #9e8662 solid;
+				color: #000;
 				width: 83%;
 				margin: 5px 8.5%;
 				padding: 7px 20px;
@@ -547,7 +310,7 @@ body > .container {
 				text-overflow: ellipsis;
    				overflow: hidden;
    				white-space: nowrap;
-				background: #f2f2f2;
+				background: #fef22e;
 				font-size: 15px;
 				box-shadow: 1px 2px 2px rgba(100, 100, 100, 0.1);
 				font-weight: bold;
@@ -628,7 +391,7 @@ body > .container {
 	width: 100px;
 	margin: auto;
 	position: absolute;
-	top: 51px;
+	top: 55px;
 	right: 0;
 	left: 0;
 	display: flex;
@@ -655,6 +418,14 @@ body > .container {
 }
 
 .main-menu > li.current-menu-ancestor > a > span {
-	color: #9e8662;
+	color: #000;
 }
 
+.teler-wd__tooltip, .teler-wd__tooltip_right {
+	display: none;
+}
+
+.teler-wd__trigger {
+	opacity: 0 !important;
+	display: none !important;
+}

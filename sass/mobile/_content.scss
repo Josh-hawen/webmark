@@ -37,7 +37,7 @@
     margin: 0 0 10px 0;
     width: 100%;
     display: flow-root;
-    background: url(http://ppc.semblog.com.ua/img/bg_main.jpg);
+    background: url(https://ppc.semblog.com.ua/img/bg_main.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 	padding: 15px 0 !important;
@@ -149,11 +149,11 @@
 	color: #169;
 }
     
-    .scheme1 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme1bm.png);}
-    .scheme2 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme2bm.png);}
-    .scheme3 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme3bm.png);}
-    .scheme4 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme4bm.png);}
-    .scheme5 {background-image: url(http://www.webmark.agency/wp-content/uploads/2018/01/scheme5am.png);}
+    .scheme1 {background-image: url(https://www.webmark.agency/wp-content/uploads/2018/01/scheme1bm.png);}
+    .scheme2 {background-image: url(https://www.webmark.agency/wp-content/uploads/2018/01/scheme2bm.png);}
+    .scheme3 {background-image: url(https://www.webmark.agency/wp-content/uploads/2018/01/scheme3bm.png);}
+    .scheme4 {background-image: url(https://www.webmark.agency/wp-content/uploads/2018/01/scheme4bm.png);}
+    .scheme5 {background-image: url(https://www.webmark.agency/wp-content/uploads/2018/01/scheme5am.png);}
 
 
     .scheme1-open, .scheme2-open, .scheme3-open, .scheme4-open, .scheme5-open {
@@ -224,3 +224,159 @@
     text-align: center;
     padding-top: 36px;
 }
+
+/*-----------------------clients pain----------------------------------*/
+
+.info {
+    border: solid 5px rgba(191, 0, 0, 0.6); 
+    padding: 10px; 
+    margin: 10px 0 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.8);
+    background-color: rgba(191, 0, 0, 0.1);
+}
+
+.info p {
+    display: block;
+    padding-left: 10%;
+}
+
+.widthimg {
+    width: 320px;
+    height: 230px;
+    float: left;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+
+.infoheightimg {
+    border: solid 1px black; 
+    padding: 10px; 
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    float: left;
+    width: 100%;
+}
+
+.infowidthimg {
+    border: solid 1px black; 
+    padding: 10px; 
+    margin: 10px;
+    margin-bottom: 20px;
+    font-family: monospace;
+    float: left;
+    width: 100%;
+}
+
+.infoheightimg img, .info img {
+    float: left;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+/*---------------------------top box---------------------------------*/
+
+.topbox {
+    margin: 0 auto;
+    width: 100%;
+    border: 5px solid #fef22e;
+    font-size: 16px;
+    background: #fef42e34;
+    margin-bottom: 10px;
+    
+}
+
+    .topboxheight {
+        width: 100%; 
+        padding: 4%;
+    }
+
+    .topboxwidth {
+        width: 100%; 
+        padding: 4%;
+    }
+
+        .topboxwidth img, .topboxheight img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+    .rightsection {
+        width: 100%;
+        padding: 5px;
+        padding-top: 15px;
+    }
+    .rightsectiond {
+        width: 100%;
+        font-weight: 700;
+        line-height: 22px;
+        font-size: 14px;
+        vertical-align: baseline;
+        text-align: center;
+    }
+
+
+.block {
+    min-height:  100px;
+    padding-bottom: 15px;
+}
+
+.block p {
+    display: block;
+    float: left;
+    width: 28%;
+}
+
+.block p:first-child {
+   width: 40%;
+}
+
+
+.block span {
+    text-decoration-line: line-through;
+    font-weight: 900;
+    color: firebrick;
+}
+
+.rightsectionimg img {
+    width: 25%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.rightsectionimg img:nth-child(1) {
+    margin-right: 10%;
+}
+
+/*----------------offer-------------------------------------*/
+
+.offer {
+    width: 100%;
+    background: #333;
+    border: solid 5px #000;
+    color: #fff;
+    display: flow-root;
+    font-size: 18px;
+    padding: 10px;
+    img {
+        width: 100%;
+        padding-bottom: 15px;
+        padding: 0;
+    }
+    span {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        font-weight: bold;
+        display: block;
+        padding-bottom: 7px;
+    }
+}
+
+
+
