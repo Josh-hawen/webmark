@@ -1,40 +1,256 @@
-.iframe {
-	margin-left: -16px;
-	width: 103%;
-}
-
-
-.messengers {
-    display: block;
-	height: 424px;
-	background: url('img/Messengers.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 1134px;
-	margin-left: -15px;
-	margin-top: -5px;
-}
-
-.messengers { 
-	.operators-wrapper {
-		text-align: center;
-		.kyivstar-top {
-			margin-top: 250px;
-			a {
-				font-size: 34px;
-			}
-			a:hover {
-				text-decoration: none !important;
-				transition: ease 0.5s;
-			}
+.contacts {
+	width: 100%;
+	display: flow-root;
+	background: #333;
+	padding-top: 10px;
+	color: #fff;
+	font-size: 18px;
+	.h4 {
+		display: block;
+		margin: 0 auto;
+		background-color: #fef22e;
+		margin-bottom: 15px;
+		&:first-child {width: 150px;}
+		&:first-child>h4 {font-size: 28px; font-weight: 500;}
+		&:nth-child(3) {width: 470px; margin-bottom: 30px;}
+		&:nth-child(4) {width: 260px; margin-bottom: 0;}
+		&:nth-child(6) {width: 150px;}
+	}
+	h4 {
+		text-transform: uppercase;
+		color: #000;
+		font-size: 22px;
+		
+	}
+	.contacts-phone-line {
+		width: 100%;
+		margin-bottom: 30px;
+		a {
+			color: #fef22e;
+			width: 25%;
+			text-decoration: none;
+			letter-spacing: 2px;
 		}
-		.kyivstar-top:before {
-			height: 34px;
+		p {
+			padding-left: 25px;
+			width: 22%;
+			float: left;
+		}
+		p:first-child:before {
+			content: '';
+			background-image: url(img/icons/calendar.png);
+			width: 42px;
+			height: 42px;
+			display: block;
+			background-size: contain;
+			float: left;
+			margin-right: 15px;
+		}
+		p:nth-child(2):before {
+			content: '';
+			background-image: url(img/icons/clock.png);
+			width: 42px;
+			height: 42px;
+			display: block;
+			background-size: contain;
+			float: left;
+			margin-right: 15px;
+		}
+		p:nth-child(3):before {
+			content: '';
+			background-image: url(img/icons/phone.png);
+			width: 42px;
+			height: 42px;
+			display: block;
+			background-size: contain;
+			float: left;
+			margin-right: 15px;
+		}
+		img {
+			float: right;
+			width: 100px;
+			margin-right: 5%;
+			margin-top: -10px;
 		}
 	}
-	.adress, .email, .time-of-work {
-		font-size: 28px;
+	a.contacts-align {
+		text-decoration: underline;
 		text-align: center;
+		color: #fff;
+		margin: 0 auto;
+		display: block;
+		margin-bottom: 20px;
+	}
+	.contacts-align {
+		text-align: center;
+		font-size: 22px;
+
 	}
 }
 
+
+.massengers {
+	.massengers-button {
+		position: fixed;
+		left: 25px;
+		bottom: 50px;
+		z-index: 9999;
+		width: 75px;
+		height: 75px;
+		display: block;
+		background: #000;
+		border-radius: 50%;
+		text-align: center;
+		border: 3px solid #fff;
+		padding-bottom: 5px;
+		cursor: pointer;
+		animation: pulse;
+		animation-duration: 6s;
+		animation-iteration-count: infinite;
+		animation-delay: 5s;
+		&:before {
+			content: "\f086";
+			font-style: normal;
+			font-weight: normal;
+			font-family: 'FontAwesome';
+			color: #fff;
+			z-index: 9999;
+			font-size: 3.15em;
+			animation: colortext1;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+		}
+		&.active::before {
+			transition: all 0.6s ease-in;
+			color: #fef22e;
+			content: "\f00d";
+			font-family: 'FontAwesome';
+		}
+		&:hover {
+			border-color: #fef22e;
+		}
+	}
+	.massengers-overlay {
+		z-index: 9997;
+		display: none;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		position: fixed;
+		opacity: 0;
+		transition: all 0.6s ease-out;
+		&.active {
+			display: block;
+			opacity: 0.8;
+			transition: all 0.6s ease-in;
+		}
+
+	}
+	.massengers-icons-left {
+		z-index: 9997;
+		position: fixed;
+		bottom: -100%;
+		left: 35px;
+		transition: all 0.6s ease-out;
+		.viber, .telegram, .whatsapp {
+			position: absolute;
+			display: block;
+			width: 55px;
+			height: 55px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 10000;
+			cursor: pointer;
+		}
+		.viber {
+			bottom: 280px;
+			left: 0;
+			background: url(img/icons/massengers/viber.png);
+			background-size: contain;
+		}
+		.telegram {
+			bottom: 210px;
+			left: 0;
+			background: url(img/icons/massengers/telegram.png);
+			background-size: contain;
+		}
+		.whatsapp {
+			bottom: 140px;
+			left: 0;
+			background: url(img/icons/massengers/whatsapp.png);
+			background-size: contain;
+		}
+		&.active {
+			bottom: 0;
+			left: 35px;
+			transition: all 0.6s ease-in;
+		}
+		
+	}
+	.massengers-icons-right {
+		z-index: 9997;
+		position: fixed;
+		bottom: -100%;
+		left: 35px;
+		transition: all 0.6s ease-out;
+		.messenger, .skype {
+			position: absolute;
+			display: block;
+			width: 55px;
+			height: 55px;
+			background-repeat: no-repeat;
+			background-size: contain;
+			z-index: 10000;
+			cursor: pointer;
+		}
+		.messenger {
+			bottom: 350px;
+			left: 0;
+			background: url(img/icons/massengers/messenger.png);
+			background-size: contain;
+		}
+		.skype {
+			bottom: 420px;
+			left: 0;
+			background: url(img/icons/massengers/skype.png);
+			background-size: contain;
+		}
+		&.active {
+			bottom: 0;
+			left: 35px;
+			transition: all 0.6s ease-in;
+		}
+	}
+}
+
+@keyframes colortext1 {
+	0% {
+		color: #fff;
+	}
+	50% {
+		color: #fef22e;
+	}
+	100% {
+
+	}
+
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 4px 6px rgba(254, 242, 46, 0) 0 0 0 0 transparent, 0 0 0 0 rgba(254, 242, 46, 0);
+	}
+	15% {
+		box-shadow: 0 0 4px 6px #fef22e, 0 0 6px 8px transparent, 0 0 6px 8px #fef22e;
+	}
+	30% {
+		box-shadow: 0 0 4px 6px rgba(254, 242, 46, 0) 0 0 0 0 transparent, 0 0 0 0 rgba(254, 242, 46, 0);
+	}
+	40% {
+		box-shadow: none;
+	}
+	100% {
+		box-shadow: none;
+	}
+}

@@ -3,6 +3,15 @@
 	background-color: #333 ; 
 }
 
+.teler-wd__promo {
+    position: fixed !important;
+    left: -100%;
+}
+
+.phones-bottom {
+	display: none;
+}
+
 @media screen and (min-width: 1200px) {
 	.footer {
 		.container {

@@ -183,6 +183,34 @@
         display: block;
         transition: 1s ease;
     }
+
+/*----------------results-------------------------------------*/
+
+.results {
+    background: #cacaca;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    display: flow-root;
+    padding: 30px;
+    h5 {
+        font-size: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .results-for-clients{
+        width: 100%;
+        padding: 10px;
+    }
+    .results-for-business {
+        width: 100%;
+        padding: 10px;
+    }
+    ul {
+        li{
+            list-style: disc;
+        }
+    }
+}
 /*-----------------------comments----------------------------------*/
 
 .comment {
@@ -287,7 +315,11 @@
     font-size: 16px;
     background: #fef42e34;
     margin-bottom: 10px;
-    
+    img {
+        max-width: 340px;}
+    p {
+        padding: 10px;
+    }
 }
 
     .topboxheight {
@@ -378,5 +410,127 @@
     }
 }
 
+.fa-check {
+    color: green !important;
+}
+
+.h4-title {
+    font-size: 30px;
+    margin-top: 30px;
+}
+.prices {
+    display: flow-root;
+    width: 100%;
+.price-block {
+    width: 98%;
+    margin: 1%;
+    text-align: center;
+    float: left;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+    .price-block-header {
+        width: 100%;
+        color: #fef22e;
+        background: #000;
+        text-align: center;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        img {
+            margin: 0 auto;
+            width: 25%;
+            margin: 10px;
+        }
+        span {
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            color: #fef22e;
+            &:first-child {
+                font-size: 40px;
+                color: #fef22e;
+            }
+        }
+        p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+    .price-block-main {
+        padding: 15px 15px 0 15px;
+        display: flow-root;
+        border: 1px solid #000;
+        .price-block-main-list {
+            border-bottom: 1px solid #000;
+            text-align: left;
+            i {
+                color: #000;
+                margin: 0 15px 15px 15px;
+                &:last-child {
+                    margin: 0 15px 30px 15px;
+                }
+            }
+        }
+        .price-block-main-priceline {
+            padding-top: 10px 0;
+            display: flow-root;
+            border-bottom: 1px solid #000;
+            .price-block-main-circle {
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                border-radius: 50%;
+                margin: 12px;
+                float: left;
+                text-align: center;
+                color: #fef22e;
+                font-size: 40px;
+                background-color: #000;
+                span {
+                    font-size: 18px;
+                }
+            }
+            .price-block-main-price-through {
+                text-decoration: line-through;
+                color: #666;
+                font-size: 24px;
+                margin: 20px 20px 0 0;
+            }
+            .price-block-main-price {
+                font-size: 38px;
+                color: #000;
+                float: right;
+            }
+            
+        }  
+        .price-block-footer {
+            height: 140px;
+            width: 100%;
+            position: relative;
+            background: #fff;
+            padding: 10px;
+            .button {
+                background: #000;
+                color: #fef22e;                
+                font-size: 22px;
+                padding: 10px 25px;                
+                border-radius: 20px;               
+                display: block;                
+                width: 70%;               
+                margin: 0 auto;
+            }
+            .button-more {
+                position: absolute;
+                bottom: -13%;
+                right: 27%;
+                font-size: 17px;
+                padding: 0px 28px;
+                margin: 0 auto;
+                background: #000;
+                border: #fef22e solid 2px;
+            }
+        } 
+    }
+}}
 
 

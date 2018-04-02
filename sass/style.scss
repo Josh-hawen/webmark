@@ -1,5 +1,5 @@
 /*
-Theme Name: WebMark theme 2.0
+Theme Name: WebMark theme 3.0
 */
 
 @import "compass/reset";
@@ -9,6 +9,7 @@ Theme Name: WebMark theme 2.0
 
 	@import "desktop/_variables.scss";
 	@import "desktop/_base.scss";
+	@import "desktop/_blog.scss";
 	@import "desktop/_fonts.scss";
 	@import "desktop/_header.scss";
 	@import "desktop/_menu.scss";
@@ -25,6 +26,7 @@ Theme Name: WebMark theme 2.0
 
 	@import "mobile/_variables.scss";
 	@import "mobile/_base.scss";
+	@import "mobile/_blog.scss";
 	@import "mobile/_header.scss";
 	@import "mobile/_menu.scss";
 	@import "mobile/_content.scss";

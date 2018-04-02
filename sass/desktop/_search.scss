@@ -1,0 +1,104 @@
+#searchsubmit {
+    background: url(https://migrations.agency/wp-content/themes/migrations-agency/img/icons/search-icon.png) no-repeat, #000;
+    box-shadow: none;
+    width: 40px;
+    background-size: contain;
+    height: 40px;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    border-radius: 5px;
+
+}
+
+.content_search-page {
+    position: relative;
+}
+
+.back-to-home {
+    font-size: 2.5em;
+    position: absolute;
+    top: 35px;
+    left: 4px;
+    cursor: pointer;
+}
+
+.searchinput:focus {
+    box-shadow: 0 0 5px #000;
+    border: 2px solid #000;
+}
+
+
+
+.header-search-form {
+    label {
+        display: none;
+    }
+    #s {
+        border-color: #fff;
+        width: 10%;
+        float: right;
+        padding: 4px 10px;
+        background: #000;
+        color: #fff !important;
+        transition: all 1s ease;
+        &:focus {
+            width: 25%; 
+            transition: all 0.5s ease;
+        }
+    }
+    #searchsubmit {
+        font-size: 0;
+        background: url(https://migrations.agency/wp-content/themes/migrations-agency/img/icons/search-icon.png) no-repeat, #fef22e;
+        background-size: contain;
+        background-position: center;
+        height: 32px;
+        width: 45px;
+        padding: 0;
+    }
+}
+
+.searchresult {
+    padding: 15px;
+    a {
+        border-bottom: 1px dotted;
+        display: block;
+        padding: 5px 15px;
+        color: #000;
+        border-left: solid 5px;   
+        box-shadow: 0 0 5px black;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.search-title {
+    border-bottom: 3px solid #fef22e;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+.pagination>ul>li {
+    float: left;
+    padding-left: 5px;
+    span, a {
+        padding: 1px 7px;
+        border: 1px solid;
+        font-size: 18px;
+    }
+    .dots {
+        border: none;
+    }
+}
+
+.content_search-page {
+    position: relative;
+}
+
+.fa-caret-right {
+    float: right;
+    font-size: 1.35em;
+}

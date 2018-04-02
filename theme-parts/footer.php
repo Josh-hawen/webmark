@@ -12,7 +12,6 @@
 			<div class="footer-section">
 
 			</div>
-
 		</div>
 	</div>
 </footer>

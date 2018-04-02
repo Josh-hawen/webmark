@@ -31,15 +31,6 @@
 	include( locate_template('theme-parts/header.php', false, false) );
 ?>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/main_menu.php', false, false) );
-?>
-
-<script>
-	// add 'active' class to the first list item in main menu
-	document.querySelector('.main-menu_box>ul>li').classList.add('active');
-</script>
 
 <div class="main">
 	<div class="container section">
@@ -54,9 +45,10 @@
 			<h1 class="search-title">
 				<?php echo $search_page_header.': "'.get_search_query().'"'; ?>
 			</h1>
+			<span class="back-to-home" onClick="location.href='javascript:history.go(-1)'"><i class="fas fa-arrow-circle-left"></i></span>
 			<div class="searchresult">
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					<a href="<?php the_permalink();?>"><?php the_title(); ?></a><br>
+					<a href="<?php the_permalink();?>"><?php the_title(); ?><i class="fas fa-caret-right"></i></a><!--<p><?php the_excerpt_rss()?></p>-->
 				<?php endwhile; else: ?>
 					<p><?php echo $search_page_no_results; ?></p>
 				<?php endif;?>
@@ -90,6 +82,11 @@
 <?php
 	/* Get widgets (Взять виджеты) */
 	include( locate_template('theme-parts/widgets.php', false, false) );
+?>
+
+<?php
+	/* Get widgets (Взять виджеты) */
+	include( locate_template('theme-parts/social.php', false, false) );
 ?>
 
 <?php

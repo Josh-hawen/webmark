@@ -1,0 +1,140 @@
+
+
+.blog-menu {
+	.blog-menu-list {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		background: linear-gradient(180deg, #333, #000);
+		.blog-menu-item {
+			width: 33%;
+			border-right: 1px solid #666;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			padding: 8px;
+			text-decoration: none;
+			border-bottom: 3px solid #000;
+			cursor: pointer;
+			&:hover {
+				border-bottom: 3px solid #fef22e;
+			}
+			&:last-child {
+				border-right: 0;
+			}
+        }
+    }
+}
+
+
+.faq-menu {
+	.faq-menu-list {
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-around;
+		background: linear-gradient(180deg, #333, #000);
+		.faq-menu-item {
+			width: 33%;
+			border-right: 1px solid #666;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 20px;
+			text-align: center;
+			padding: 8px;
+			text-decoration: none;
+			border-bottom: 3px solid #000;
+			cursor: pointer;
+			&:hover {
+				border-bottom: 3px solid #fef22e;
+			}
+			&:last-child {
+				border-right: 0;
+			}
+		}
+	}
+}
+
+
+
+.list_nmbr {
+    width:200px;
+}
+     
+.list_nmbr li {
+    position: relative;
+	margin: 0 0 8px 12px;
+	list-style: none;
+}
+     
+.list_nmbr a {
+    line-height: 27px;
+    font-size: 16px;
+    color: #555;
+    text-decoration: none;
+    display:inline-block;
+    background:#f1f1f1;
+    padding:0 0 0 10px;
+    display:block;
+}
+      
+.list_nmbr span {
+    background:#F10B41;
+    font-size: 16px;
+    color:#fff;
+    padding:0 10px;
+    line-height: 27px;
+    font-weight:bold;
+    margin-left:5px;
+    float:right;
+}
+
+.size-post-thumbnail {
+	width: 40%;
+	height: auto;
+	float: left;
+	margin-right: 40px;
+}
+
+.post-preview {
+    display: flow-root;
+    padding: 15px;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.5);
+	margin: 15px 0;
+	position: relative;
+    img {
+		width: 30%;
+		height: 80%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+    }
+    p {
+		padding: 0 0 0 31%;
+	}
+	.readmore {
+		border: 1px solid;
+		padding: 5px;
+		font-size: 18px;
+		position: absolute;
+		color: black;
+		background: #f5f5f5;
+		bottom: 10px;
+		right: 30px;
+		&:hover {
+			text-decoration: none;
+			opacity: 0.8;
+		}
+	}
+	.post-time {
+		padding-left: 330px;
+		padding-top: 20px;
+	}
+}
+
+section {
+	padding-top: 10px;
+}
+

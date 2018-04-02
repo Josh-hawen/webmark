@@ -56,10 +56,6 @@
 	</div>
 </div>
 
-<?php
-	/* Get search form (берем форму поиска) */
-	include( locate_template('theme-parts/search_form.php', false, false) );
-?>
 
 <?php
 	/* Get footer (ну тут все понятно) */

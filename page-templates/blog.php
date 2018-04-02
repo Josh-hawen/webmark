@@ -1,10 +1,9 @@
-<?php
+﻿<?php
 /*
 Template Name: Blog
 */
 ?>
 
-<!DOCTYPE html>
 <html>
 
 <?php
@@ -37,41 +36,55 @@ Template Name: Blog
 	include( locate_template('theme-parts/header.php', false, false) );
 ?>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/main_menu.php', false, false) );
-?>
 
-<p style="font-size: 30px; color: #fff; text-align: center; max-width: 1200px; margin: 5px auto">
-	<?php echo ($lng == "ru-RU") ? "Блог" : ($lng == "uk-UA" ? "Блог" : "Blog"); ?>
-</p>
 
+
+<main class="content">
+<div class="container section">
 <?php
 	/* Get main-menu section (берем секцию главного меню) */
 	include( locate_template('theme-parts/blog_menu.php', false, false) );
 ?>
-
-<main class="content">
-
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php the_content(); ?>
-	<?php endwhile; ?>
-		<!-- hm -->
-	<?php else: ?>
-		<!-- if no posts -->
-	<?php endif; ?>
-
-	<?php
-		/* Get social section (добавляем секцию социальных иконок) */
-		include( locate_template('theme-parts/social.php', false, false) );
-	?>
-
-</main>
-
-<?php
-	/* Get search form (берем форму поиска) */
-	include( locate_template('theme-parts/search_form.php', false, false) );
-?>
+    <article>
+ 
+        <?php // Display blog posts on any page @ http://m0n.co/l
+        $temp = $wp_query; $wp_query= null;
+        $wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+        while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+			<div class="post-preview">
+			<h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
+			<?php the_excerpt(); ?>
+			<div class="post-time"><?php the_time('j F Y в H:i'); ?></div>
+</div>
+        
+ 
+        <?php endwhile; ?>
+ 
+        <?php if ($paged > 1) { ?>
+ 
+        <nav id="nav-posts">
+            <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+            <div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
+        </nav>
+ 
+        <?php } else { ?>
+ 
+        <nav id="nav-posts">
+            <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+        </nav>
+ 
+        <?php } ?>
+ 
+		<?php wp_reset_postdata(); ?>
+ 
+	</article>
+ </main>
+ 
+ <?php
+				/* Get social section (добавляем секцию социальных иконок) */
+				include( locate_template('theme-parts/social.php', false, false) );
+			?>
 
 <?php
 	/* Get footer (ну тут все понятно) */
@@ -87,17 +100,6 @@ Template Name: Blog
 	/* Need to be before "body" tag closes (дожно быть перед закрытем тега "body") */
 	wp_footer();
 ?>
-
-
-<script>
-console.log('dasdas');
-	document.addEventListener("DOMContentLoaded", function () {
-		console.log('elem');
-		var elem = document.querySelector('.main-menu>li:first-child').classList.add('current-menu-item');
-		console.log('elem2');
-	});
-</script>
-
 </body>
 
 </html>

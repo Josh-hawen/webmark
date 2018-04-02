@@ -7,6 +7,5 @@
 
 <!-- {/literal} END JIVOSITE CODE -->
 
-<script src="https://mssg.me/widget/webmark" async></script>
 
 <!-- Add custom analitycs from .js file (добавляем собственную аналитику с .js файла) -->

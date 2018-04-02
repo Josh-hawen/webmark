@@ -13,6 +13,7 @@ body {
 	font-size: 16px;
 	font-family: 'Rubik', sans-serif;
 	background-color: #000 !important;
+	line-height: 1.42857143;
 }
 
 p {
@@ -64,7 +65,7 @@ h2 {
 h1 {
 	text-transform: uppercase;
 	font-size: 24px;
-	margin: 0 auto 15px;
+	margin: 0 !important;
 }
 h4+h1 {
 	margin-bottom: 0;
@@ -79,7 +80,6 @@ h4+p {
 h4 {
 	text-align: center;
     font-size: 22px;
-    margin-bottom: -20px;
     font-weight: 400;
 }
 
@@ -145,27 +145,34 @@ sub, sup {
 
 input {
 	width: 100%;
-	border-radius: 5px;
-	border-color: #999;
-	padding: 6px 24px;
-	background: rgba(0, 0, 0, 0.5);
-	font-size: 16px;
+	padding: 8px 28px;
+	border-radius: 10px;
+	border: 2px solid #000;
+	color: #000 !important;
 }
 
 input:focus {
-	border-color: dodgerblue;
+	border-color: white;
 }
 
 input[type="submit"] {
-	margin-top: 30px;
-	background: #2eb5f3;
-	color: #fff;
-	padding: 12px 30px;
+	background: #000;
+	color: #fef22e !important;
+	font-size: 22px;
+	padding: 10px 35px;
 	border: none;
 	width: auto;
 	box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.8);
-	font-size: 16px;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 15px;
+    display: block;
 }
+
+.wpcf7-form .wpcf7-submit:hover {
+	background-color: #fef22e !important;
+	color: #000 !important;
+ }
 
 label {
 	font-size: 18px;
@@ -173,4 +180,17 @@ label {
 	margin-bottom: 21px;
 }
 
+.contact-form {
+	float: left;
+	width: 100%;
+	background: #cc4949;
+}
 
+img.contact-form {
+	width: 52%;
+	margin-right: 15px;
+}
+
+.order-button {
+	cursor: pointer;
+}

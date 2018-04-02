@@ -285,12 +285,56 @@ function breadcrumbs() {
 
   }
 } // end of breadcrumbs()
+
+
+//blog
+
+
+function excerpt_readmore($more) {
+  return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'Подробнее' . '</a>';
+}
+add_filter('excerpt_more', 'excerpt_readmore');
+
+function tinymce_excerpt_js(){ ?>
+  <script type="text/javascript">
+      jQuery(document).ready( tinymce_excerpt );
+      function tinymce_excerpt() {
+      jQuery("#excerpt").addClass("mceEditor");
+      tinyMCE.execCommand("mceAddControl", false, "excerpt");
+      }
+  </script>
+  <?php }
+  add_action( 'admin_head-post.php', 'tinymce_excerpt_js');
+  add_action( 'admin_head-post-new.php', 'tinymce_excerpt_js');
+   
+  function tinymce_css(){ ?>
+  <style type='text/css'>
+      #postexcerpt .inside{margin:0;padding:0;background:#fff;}
+      #postexcerpt .inside p{padding:0px 0px 5px 10px;}
+      #postexcerpt #excerpteditorcontainer { border-style: solid; padding: 0; }
+  </style>
+  <?php }
+  add_action( 'admin_head-post.php', 'tinymce_css');
+  add_action( 'admin_head-post-new.php', 'tinymce_css');
+  
+
+  if ( function_exists( 'add_theme_support' ) )
+  add_theme_support( 'post-thumbnails', array( 'post' ) );
+  
+
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 function replace_text($text) {
-  $text = str_replace('<tr><th>Наименование</td><th>Сроки</td><th>Цена</td></tr>', '<tr><th style="text-align: center;">Услуга</td><th>Сроки</td><th>Цена</td></tr>', $text);
-  $text = str_replace('<p style="text-align: center;"><b>СХЕМА РАБОТЫ:</b></p>', '<div style="text-align: center;"><b>СХЕМА РАБОТЫ:</b></div>', $text);
-  $text = str_replace('<br><br><p style="text-align: center;"><b>НЕОБХОДИМЫЕ ДОКУМЕНТЫ ОТ ВАС:</b></p>', '<br><br><div style="text-align: center;"><b>НЕОБХОДИМЫЕ ДОКУМЕНТЫ ОТ ВАС:</b></div><br>', $text);
+  $text = str_replace('<a class="button">Заказать</a>', '<a class="button order-button">Заказать</a>', $text);
+  $text = str_replace('<a href="" class="button">Заказать</a>', '<a class="button order-button">Заказать</a>', $text);
+  $text = str_replace('<a class="button">Заказать</a>', '<a class="button order-button">Заказать</a>', $text);
+  $text = str_replace('<div class="prices">', '<div class="prices" id="prices">', $text);
+  $text = str_replace('<li>Увеличение обьемов трафика на сайт</li>', '<li>Увеличение объемов трафика на сайт</li>', $text);
+  $text = str_replace('<p><b>3)</b> Боитесь что инвестиции в рекламу не принисут результат? </p><br>', '<p><b>3)</b> Боитесь что инвестиции в рекламу не принесут результат? </p><br>', $text);
   return $text;
 }
 add_filter('the_content', 'replace_text');
-
 ?>
+
+
+

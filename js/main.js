@@ -2,11 +2,15 @@ $(document).ready(function() {
 
 var current_page = $('h1').html();
 
+
 // Для мобильной версии действия при клике на одну из иконок меню
 $('.mobile-list-item').on('click', function (e) {
 var related = $(this).attr('data-related-item');
 	addActiveClass(related, $(this));
 });
+
+
+
 
 var lastItem;
 var lastMenuItem;
@@ -128,7 +132,7 @@ console.log(menu);
 // menu = menu.wrap('<div id="menu_wrapper" style="position:relative">');
 
 
-var step = 287,
+var step = 278,
 	next_desktop,
 	prev_desktop;
 
@@ -139,7 +143,7 @@ console.log (activeItem.index());
 if ($(window).width() >= 1129) {
 	addMenuControls(menu);
 	if (activeItem.index() > 4) {
-		menu.scrollLeft(step*(activeItem.index()-4));
+		menu.scrollLeft(step*(activeItem.index()-1));
 	}
 }
 
@@ -309,6 +313,34 @@ $("#menu-close").click(function(){
 	$('#hamburger').toggleClass('opened');
 });
 
+$(".massengers-button").click(function(){
+	$(this).toggleClass('active');
+	$('.massengers-overlay').toggleClass('active');
+	$('.massengers-icons-left').toggleClass('active');
+	$('.massengers-icons-right').toggleClass('active');
+});
+
+$(".massengers-icons-left").click(function(){
+	$(this).toggleClass('active');
+	$('.massengers-button').toggleClass('active');
+	$('.massengers-overlay').toggleClass('active');
+	$('.massengers-icons-right').toggleClass('active');
+});
+
+$(".massengers-icons-right").click(function(){
+	$(this).toggleClass('active');
+	$('.massengers-button').toggleClass('active');
+	$('.massengers-overlay').toggleClass('active');
+	$('.massengers-icons-left').toggleClass('active');
+});
+
+$(".massengers-overlay").click(function(){
+	$(this).toggleClass('active');
+	$('.massengers-button').toggleClass('active');
+	$('.massengers-icons-left').toggleClass('active');
+	$('.massengers-icons-right').toggleClass('active');
+});
+
 $('.slider').each(function() {
 	var $this = $(this);
 	var $group = $this.find('.slide_group');
@@ -398,3 +430,17 @@ $('.slider').each(function() {
 	
 	advance();
   });
+
+	$(".order-button").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contact-form").offset().top
+    }, 1000);
+});
+
+
+
+
+
+
+  //  var selected = document.querySelector('.current-menu-item');
+  //  selected.scrollIntoView();

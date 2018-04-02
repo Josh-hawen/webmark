@@ -11,10 +11,11 @@ html {
 }
 
 body {
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Rubik', sans-serif;
 	background-color: #f2f3f4;
-    width: 100%;
+	width: 100%;
+	line-height: 1.42857143;
 }
 
 a {
@@ -117,35 +118,105 @@ th {
 
 input {
 	width: 100%;
-	border-radius: 5px;
-	border-color: #999;
-	padding: 5px;
-	background: rgba(0, 0, 0, 0.5);
-	font-size: 16px;
+	padding: 8px 28px;
+	border-radius: 10px;
+	border: 2px solid #000;
+	color: #000 !important;
 }
 
+
+
 input:focus {
-	border-color: dodgerblue;
+	border-color: red;
 }
 
 input[type="submit"] {
-	background-color: dodgerblue;
+	background: #000;
+	color: #fef22e !important;
+	font-size: 22px;
+	padding: 10px 35px;
 	border: none;
-	box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.75);
-	padding: 9px 18px;
-	color: #fff;
-	margin-top: 30px; 
 	width: auto;
-	font-size: 16px;
+	box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.8);
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 15px;
+    display: block;
 }
+
+.wpcf7-form .wpcf7-submit:hover {
+	background-color: #fef22e !important;
+	color: #000 !important;
+ }
 
 label {
 	font-size: 18px;
 	color: #fff;
+	margin-bottom: 21px;
 }
 
-form {
-color: #999;
-	font-size: 16px;
-	
+.contact-form {
+	float: left;
+	width: 100%;
+	background: #cc4949;
 }
+
+img.contact-form {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.container {
+	padding: 0 !important;
+}
+
+.order-button {
+	cursor: pointer;
+}
+
+// ::-webkit-scrollbar {
+//       width:  15px;
+//   }
+
+// ::-webkit-scrollbar-thumb {
+//       background: #000;
+//   }
+
+// ::-webkit-scrollbar-track {
+//       background: #666;
+//   }
+
+::-webkit-scrollbar-button { 
+	background-image:url(''); 
+	background-repeat:no-repeat; 
+	width:6px; 
+	height:0px 
+	} 
+	
+	::-webkit-scrollbar-track { 
+	background-color:#32312e; 
+	box-shadow:0px 0px 3px #000 inset; 
+	height: 75%;
+	} 
+	
+	::-webkit-scrollbar-thumb { 
+	-webkit-border-radius: 5px; 
+	border-radius: 5px; 
+	background-color:#fef22e; 
+	box-shadow:0px 1px 1px #fff inset; 
+	background-image:url('https://yraaa.ru/_pu/24/59610063.png'); 
+	background-position:center; 
+	background-repeat:no-repeat; 
+	} 
+	
+	::-webkit-resizer{ 
+	background-image:url(''); 
+	background-repeat:no-repeat; 
+	width:7px; 
+	height: 75%;
+	} 
+	
+	::-webkit-scrollbar{ 
+	width: 11px; 
+	height: 30px;
+	}

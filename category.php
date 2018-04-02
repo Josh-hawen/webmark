@@ -31,60 +31,45 @@
 	include( locate_template('theme-parts/header.php', false, false) );
 ?>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/main_menu.php', false, false) );
-?>
 
-<p style="font-size: 30px; color: #fff; text-align: center; max-width: 1200px; margin: 5px auto">
-	<?php echo single_cat_title().(($lng == "ru-RU") ? " (Блог)" : ($lng == "uk-UA" ? " (Блог)" : " (Blog)")); ?>
-</p>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/blog_menu.php', false, false) );
-?>
 
 <div class="main">
 	<div class="container section">
+	<?php
+	/* Get main-menu section (берем секцию главного меню) */
+	include( locate_template('theme-parts/blog_menu.php', false, false) );
+?>
+	<p style="font-size: 30px; color: #000; text-align: center; max-width: 1200px; margin: 5px auto">
+	<?php echo single_cat_title().(($lng == "ru-RU") ? " (Блог)" : ($lng == "uk-UA" ? " (Блог)" : " (Blog)")); ?>
+</p>
+
 		<?php if (function_exists('breadcrumbs')) breadcrumbs(); ?>
 		<main class="main-container">
 
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<?php #echo get_posts( array('category_name' => single_cat_title()) ); ?>
-
 				<ul>
 					<?php
 						global $post;
-						$args = array( 'posts_per_page' => 20, 'category' => get_cat_ID( single_cat_title('', 0) ) );
+						$args = array( 'posts_per_page' => 2, 'category' => get_cat_ID( single_cat_title('', 0) ) );
 						$myposts = get_posts( $args );
-						foreach( $myposts as $post ){ setup_postdata($post);
 							?>
-							<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-							<?php
-						}
-						wp_reset_postdata();
-					?>
+						<div class="post-preview">
+							<h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+							<a href="<?php the_permalink() ?>"><?php the_post_thumbnail() ?></a>
+							<?php the_excerpt(); ?>
+							<div class="post-time"><?php the_time('j F Y в H:i'); ?></div>
+						</div>
 				</ul>
 				<?php #the_content(); ?>
-			<?php endwhile; ?>
-				<!-- hm -->
-			<?php else: ?>
-				<!-- if no posts -->
+				<?php endwhile; else: ?>
+				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 			<?php endif; ?>
-
-			<?php
-				/* Get social section (добавляем секцию социальных иконок) */
-				include( locate_template('theme-parts/social.php', false, false) );
-			?>
 		</main>
 	</div>
 </div>
 
-<?php
-	/* Get search form (берем форму поиска) */
-	include( locate_template('theme-parts/search_form.php', false, false) );
-?>
 
 <?php
 	/* Get footer (ну тут все понятно) */

@@ -31,36 +31,30 @@
 	include( locate_template('theme-parts/header.php', false, false) );
 ?>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/main_menu.php', false, false) );
-?>
 
 <div class="main">
 	<div class="container section">
+	<?php
+	/* Get main-menu section (берем секцию главного меню) */
+	include( locate_template('theme-parts/blog_menu.php', false, false) );
+?>
 		<?php if (function_exists('breadcrumbs')) breadcrumbs(); ?>
 		<main class="main-container">
 
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<?php the_content(); ?>
-			<?php endwhile; ?>
-				<!-- hm -->
-			<?php else: ?>
-				<!-- if no posts -->
-			<?php endif; ?>
-
-			<?php
-				/* Get social section (добавляем секцию социальных иконок) */
-				include( locate_template('theme-parts/social.php', false, false) );
-			?>
+				<div class="main-heading">
+					<h1><?php the_title(); ?></h1>
+					</div>
+					<section>
+					<?php while (have_posts()): the_post();?>
+					<?php the_post_thumbnail() ?>
+					<?php the_content();?>
+					<?php endwhile; ?>
+					<div class="post-time"><?php the_time('j F Y в H:i'); ?></div>
+		</section>
 		</main>
 	</div>
 </div>
 
-<?php
-	/* Get search form (берем форму поиска) */
-	include( locate_template('theme-parts/search_form.php', false, false) );
-?>
 
 <?php
 	/* Get footer (ну тут все понятно) */

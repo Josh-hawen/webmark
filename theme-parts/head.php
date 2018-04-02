@@ -37,10 +37,12 @@
 	</script>
 	<script type="text/javascript" src="<?php echo $theme_dir; ?>/libs/jquery/jquery-2.1.3.min.js"></script>
 	<script src="<?php echo $theme_dir; ?>/js/main.js" defer></script>
+	<script src="<?php echo $theme_dir; ?>/js/scroll.js" defer></script>
 	<script type="text/javascript" src="<?php echo $theme_dir; ?>/libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- Styles -->
 	<link rel="stylesheet" href="<?php echo $theme_dir; ?>/libs/bootstrap-3.3.5/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="<?php echo $theme_dir; ?>/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="<?php echo $theme_dir; ?>/style.css"/>
 	<!--[if lt IE 9]>
 	<script src="<?php echo $theme_dir; ?>/libs/html5shiv/es5-shim.min.js"></script>

@@ -5,6 +5,7 @@
 			<nav class="col-md-12 navbar navbar-default">
 				<div class="container-fluid" id="menu-bar">
 				<span class="menu-close" id="menu-close"><i class="far fa-3x fa-times-circle"></i></span>
+				<div class="search-form header-search-form"><?php get_search_form(); ?></div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<?php $args = array( // опции для вывода верхнего меню, чтобы они работали, меню должно быть создано в админке
 							'theme_location' => 'top-menu', // идентификатор меню, определен в register_nav_menus() в functions.php
@@ -20,7 +21,6 @@
 					
 					<a href="tel:+380678013311" class="mobile-phone mobile-display"><span class="mobile-phone-icons"></span>+380678013311</a>
 					<a class="header-contacts-mail mobile-display" href="mailto:info@webmark.agency"><i class="fas fa-envelope"></i> info@webmark.agency</a><br>
-					<div class="search-form mobile-display"><form><input type="text" placeholder="Искать здесь..."><button type="submit"></button></form></div>
 				</div>
 			</nav>
 		<div class="header-main col-md-12">
@@ -45,9 +45,9 @@
 				</div>
 			</div>
 			
-			<div class="col-md-3 location">
-			    <img src="http://www.webmark.agency/wp-content/uploads/2018/02/map-trigger.png" alt="map" id="map-little">
-				<p>г. Киев, <br> ул. Б. Васильковская, д. 43/16</p>
+			<div class="location">
+			    <img src="https://www.webmark.agency/wp-content/uploads/2018/02/map-trigger.png" alt="map" id="map-little">
+				<p>г. Киев, ул. Б. Васильковская 43/16, офис 29</p>
 				<p>3 минуты от м. Льва Толстого</p>
 				<p class="map-big"><span id="map-open" class="map_info_text">Схема проезда</span>
 				<span class="map-open" id="map-open-in">

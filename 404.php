@@ -31,10 +31,6 @@
 	include( locate_template('theme-parts/header.php', false, false) );
 ?>
 
-<?php
-	/* Get main-menu section (берем секцию главного меню) */
-	include( locate_template('theme-parts/main_menu.php', false, false) );
-?>
 
 <div class="main">
 	<div class="container section">
@@ -47,10 +43,6 @@
 	</div>
 </div>
 
-<?php
-	/* Get search form (берем форму поиска) */
-	include( locate_template('theme-parts/search_form.php', false, false) );
-?>
 
 <?php
 	/* Get footer (ну тут все понятно) */

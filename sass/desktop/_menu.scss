@@ -100,15 +100,6 @@
 			color: #095580;
 			border-color: inherit;
 		}
-		&.current-menu-item>a,
-		&.current-menu-ancestor>a {
-			&:first-child>a {
-				
-			}
-			&:last-child>a {
-				
-			}
-		}
         &>a {
 				height: 48px;
 				border: 0;
@@ -185,6 +176,9 @@
 		font-size: 0;
 		&>li {
 			display: block;
+			background-repeat: no-repeat;
+			background-position: 15% 27%;
+			background-size: 13%;
 			&>a {
 				color: #333;
 				font-size: 15px;
@@ -369,13 +363,16 @@
   /*border: 1px solid black;*/
   /*list-style-type: none;*/
   background-color: #000;
-  flex: 0 0 279px;
+  flex: 0 0 270px;
   position: relative;
-  height: 160px;
-  overflow-y: auto;
   background: #f5f5f5;
-  margin: 0 0.7% 0 0;
+  margin: 0 8px 0 0;
   border-bottom-left-radius: 20px;
+}
+
+.main-menu>li>ul>li>ul {
+	height: 160px;
+	overflow-y: auto;
 }
 // .main-menu>li>.sub-menu>li:first-child {
 // 	border-left: 3px solid #fef22e !important;
@@ -535,6 +532,9 @@ a.teler-wd-promo, .teler-wd-link-to-us {
 }
 
 
+
+
+
 /*====================block2===============================*/
 .main-menu > li> ul > li > ul > li.current-menu-item > a, .main-menu > li> ul > li > ul > li.current-menu-ancestor > a {
 	background-color: transparent;
@@ -569,24 +569,120 @@ a.teler-wd-promo, .teler-wd-link-to-us {
 
 
 
-.menu-item-485, .menu-item-489, .menu-item-836, .menu-item-488, .menu-item-482, .menu-item-944,  .menu-item-865,  .menu-item-866,  .menu-item-867,  .menu-item-868,  .menu-item-945,  .menu-item-904,  .menu-item-969,  .menu-item-970,  .menu-item-905,  .menu-item-906,  .menu-item-907,  .menu-item-908,  .menu-item-909 {
-	background-repeat: no-repeat;
-	background-position: 15% 27%;
-	background-size: 13%;
+#menu-item-1357 {
+	background-position: 8% 40%;
+	&>a {
+		padding: 9px 0 9px 48px;
+	}
 }
 
-.menu-item-485, .menu-item-904 {background-image: url(img/menu/icons/adwords.png);}
-.menu-item-489, .menu-item-905 {background-image: url(img/menu/icons/yandex.png);}
-.menu-item-836 {background-image: url(img/menu/icons/bing.png);}
-.menu-item-488, .menu-item-906 {background-image: url(img/menu/icons/facebook.png);}
-.menu-item-482, .menu-item-907 {background-image: url(img/menu/icons/instagram.png);}
-.menu-item-944, .menu-item-969 {background-image: url(img/menu/icons/play.png);}
-.menu-item-865 {background-image: url(img/menu/icons/twitter.png);}
-.menu-item-866, .menu-item-908 {background-image: url(img/menu/icons/vk.png);}
-.menu-item-867, .menu-item-909 {background-image: url(img/menu/icons/od.png);}
-.menu-item-868 {background-image: url(img/menu/icons/pinterest.png);}
-.menu-item-945 {background-image: url(img/menu/icons/skype.png);}
-.menu-item-970 {background-image: url(img/menu/icons/gmail.png);}
+.menu-item-485, .menu-item-904, .menu-item-1354 {background-image: url(img/menu/icons/adwords.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/adwords-color.png);}}
+.menu-item-489, .menu-item-905, .menu-item-1355 {background-image: url(img/menu/icons/yandex.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/yandex-color.png);}}
+.menu-item-836 {background-image: url(img/menu/icons/bing.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/bing-color.png);}}
+.menu-item-488, .menu-item-906, .menu-item-1324 {background-image: url(img/menu/icons/facebook.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/facebook-color.png);}}
+.menu-item-482, .menu-item-907, .menu-item-1325 {background-image: url(img/menu/icons/instagram.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/instagram-color.png);}}
+.menu-item-944, .menu-item-969, .menu-item-1438, .menu-item-1326 {background-image: url(img/menu/icons/play.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/youtube-color.png);}}
+.menu-item-865, .menu-item-1327 {background-image: url(img/menu/icons/twitter.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/twitter-color.png);}}
+.menu-item-866, .menu-item-908, .menu-item-1328 {background-image: url(img/menu/icons/vk.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/vk-color.png);}}
+.menu-item-867, .menu-item-909, .menu-item-1329 {background-image: url(img/menu/icons/od.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/ok-color.png);}}
+.menu-item-868, .menu-item-1330 {background-image: url(img/menu/icons/pinterest.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/pinterest-color.png);}}
+.menu-item-945 {background-image: url(img/menu/icons/skype.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/skype-color.png);}}
+.menu-item-970 {background-image: url(img/menu/icons/gmail.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/gmail-color.png);}}
+.menu-item-1439 {background-image: url(img/menu/icons/audit.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/audit-color.png);}}
+.menu-item-1356 {background-image: url(img/menu/icons/begun.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/begun-color.png);}}
+.menu-item-1357 {background-image: url(img/menu/icons/kon-med.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/kon-med-color.png);}}
+//tiser
+.menu-item-899 {background-image: url(img/menu/icons/margid.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/margid-color.png);}}
+.menu-item-901 {background-image: url(img/menu/icons/kadam.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/kadam-color.png);}}
+.menu-item-902 {background-image: url(img/menu/icons/direct.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/direct-color.png);}}
+.menu-item-953 {background-image: url(img/menu/icons/bodyclick.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/bodyclick-color.png);}}
+.menu-item-954 {background-image: url(img/menu/icons/adlabs.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/adlabs-color.png);}}
+//marketplace
+.menu-item-981 {background-image: url(img/menu/icons/olx.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/olx-color.png);}}
+.menu-item-982 {background-image: url(img/menu/icons/prom.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/prom-color.png);}}
+.menu-item-983 {background-image: url(img/menu/icons/allbiz.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/allbiz-color.png);}}
+//web-analytics
+.menu-item-1077 {background-image: url(img/menu/icons/g-analytics.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/g-analytics-color.png);}}
+.menu-item-1078 {background-image: url(img/menu/icons/yandex-metrics.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/yandex-metrics-color.png);}}
+.menu-item-1079 {background-image: url(img/menu/icons/facebook-analytics.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/facebook-analytics-color.png);}}
+//seo
+.menu-item-1300 {background-image: url(img/menu/icons/vnut-seo.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/vnut-seo-color.png);}}
+.menu-item-1301 {background-image: url(img/menu/icons/vnesh-seo.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/vnesh-seo-color.png);}}
+.menu-item-1302 {background-image: url(img/menu/icons/seo-audit.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/seo-audit-color.png);}}
+.menu-item-1303 {background-image: url(img/menu/icons/serm.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/serm-color.png);}}
+.menu-item-1304 {background-image: url(img/menu/icons/check-sanctions.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/check-sanctions-color.png);}}
+.menu-item-1305 {background-image: url(img/menu/icons/lift-sanctions.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/lift-sanctions-color.png);}}
+//стратегия
+.menu-item-1339 {background-image: url(img/menu/icons/audit2.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/audit2-color.png);}}
+.menu-item-1340 {background-image: url(img/menu/icons/consulting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/consulting-color.png);}}
+.menu-item-1367 {background-image: url(img/menu/icons/automation.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/automation-color.png);}}
+//price агрегаторы
+.menu-item-1474 {background-image: url(img/menu/icons/hotline.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/hotline-color.png);}}
+.menu-item-1475 {background-image: url(img/menu/icons/price.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/price-color.png);}}
+.menu-item-1476 {background-image: url(img/menu/icons/nadavi.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/nadavi-color.png);}}
+.menu-item-1477 {background-image: url(img/menu/icons/m-ua.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/m-ua-color.png);}}
+.menu-item-1478 {background-image: url(img/menu/icons/ek-ua.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-color/ek-ua-color.png);}}
+
+//---------------------------------------------site--------------------------------------------
+
+//web-design
+.menu-item-495 {background-image: url(img/menu/icons-site/web-design.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/web-design-color.png);}}
+.menu-item-1017 {background-image: url(img/menu/icons-site/redesign.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/redesign-color.png);}}
+.menu-item-1385 {background-image: url(img/menu/icons-site/media-banners.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/media-banners-color.png);}}
+.menu-item-1386 {background-image: url(img/menu/icons-site/usability.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/usability-color.png);}}
+
+//optimizaciya
+
+.menu-item-1400 {background-image: url(img/menu/icons-site/cms.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/cms-color.png);}}
+.menu-item-1401 {background-image: url(img/menu/icons-site/fast-loading.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/fast-loading-color.png);}}
+.menu-item-1402 {background-image: url(img/menu/icons-site/adaptation.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/adaptation-color.png);}}
+.menu-item-1403 {background-image: url(img/menu/icons-site/technical-audit.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/technical-audit-color.png);}}
+
+//tehpodderzhka
+
+.menu-item-1425 {background-image: url(img/menu/icons-site/ssl.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/ssl-color.png);}}
+.menu-item-1426 {background-image: url(img/menu/icons-site/hosting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/hosting-color.png);}}
+.menu-item-1427 {background-image: url(img/menu/icons-site/defence.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/defence-color.png);}}
+
+//sozdanie saita
+
+.menu-item-1018 {background-image: url(img/menu/icons-site/landing.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/landing-color.png);}}
+.menu-item-1373 {background-image: url(img/menu/icons-site/vizitka-site.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/vizitka-site-color.png);}}
+.menu-item-1019 {background-image: url(img/menu/icons-site/corporation-site.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/corporation-site-color.png);}}
+.menu-item-1383 {background-image: url(img/menu/icons-site/internet-shop.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/internet-shop-color.png);}}
+.menu-item-1384 {background-image: url(img/menu/icons-site/dorabotka.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/dorabotka-color.png);}}
+.menu-item-1020 {background-image: url(img/menu/icons-site/mobile.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/mobile-color.png);}}
+
+//integraciya
+
+.menu-item-1063 {background-image: url(img/menu/icons-site/ip-atc.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/ip-atc-color.png);}}
+.menu-item-1066 {background-image: url(img/menu/icons-site/calltracking.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/calltracking-color.png);}}
+.menu-item-1071 {background-image: url(img/menu/icons-site/amocrm.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/amocrm-color.png);}}
+.menu-item-1429 {background-image: url(img/menu/icons-site/messangers.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/messangers-color.png);}}
+.menu-item-1430 {background-image: url(img/menu/icons-site/online-chat.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/online-chat-color.png);}}
+.menu-item-1431 {background-image: url(img/menu/icons-site/mailing.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/mailing-color.png);}}
+.menu-item-1432 {background-image: url(img/menu/icons-site/sms-mailing.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-site-color/sms-mailing-color.png);}}
+
+//---------------------------------------------site--------------------------------------------
+
+//textoviy
+.menu-item-1456 {background-image: url(img/menu/icons-content/copywriting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/copywriting-color.png);}}
+.menu-item-1457 {background-image: url(img/menu/icons-content/rewriting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/rewriting-color.png);}}
+.menu-item-1458 {background-image: url(img/menu/icons-content/seo-copywriting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/seo-copywriting-color.png);}}
+.menu-item-1459 {background-image: url(img/menu/icons-content/smm-copywriting.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/smm-copywriting-color.png);}}
+
+//graphicheskiy
+.menu-item-1460 {background-image: url(img/menu/icons-content/infographics.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/infographics-color.png);}}
+.menu-item-1461 {background-image: url(img/menu/icons-content/presentations.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/presentations-color.png);}}
+
+//video
+.menu-item-1462 {background-image: url(img/menu/icons-content/video-montage.png); &:hover, &.current_page_item {background-image: url(img/menu/icons-content-color/video-montage-color.png);}}
+
+
+
+//class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-346 current_page_item menu-item-has-children menu-item-570"
+//menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-346 current_page_item menu-item-has-children menu-item-570
+//menu-item menu-item-type-post_type menu-item-object-page menu-item-home                                                             menu-item-has-children menu-item-570
 
 
 

@@ -1,6 +1,6 @@
 <!-- <nav class="main-menu"> -->
 
-		<div style="position: relative" class="container mCustomScrollbar" data-mcs-theme="rounded-dots-dark">
+		<div style="position: relative" class="container">
 			<?php
 				wp_nav_menu( array (
 					'container'       => '',
@@ -12,6 +12,10 @@
 				));
 			?>
 			<ul class="menu-dots">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
